@@ -7,6 +7,8 @@ import WebKit
 
 class HomeDetailViewController: UIViewController {
     @IBOutlet private var webView: WKWebView!
+    
+    private var viewModel: HomeDetailViewModelProtocol?
 }
 
 extension HomeDetailViewController {

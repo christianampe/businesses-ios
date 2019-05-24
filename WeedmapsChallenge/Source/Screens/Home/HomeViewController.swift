@@ -8,20 +8,21 @@ class HomeViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
     
     private var searchController = UISearchController(searchResultsController: nil)
-    private var searchResults: HomeViewModelProtocol?
     private var searchDataTask: URLSessionDataTask?
+    private var viewModel: HomeViewModelProtocol?
 }
 
 // MARK: - Lifecycle
 extension HomeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
     }
 }
 
 // MARK: - Setup Methods
 private extension HomeViewController {
-    func setUp() {
+    func configure() {
         navigationItem.searchController = searchController
     }
 }

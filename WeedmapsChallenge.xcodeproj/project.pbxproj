@@ -34,6 +34,17 @@
 		BFC93E2A2297AB970077598A /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E292297AB970077598A /* HomeViewModelProtocol.swift */; };
 		BFC93E2C2297ABED0077598A /* HomeDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E2B2297ABEC0077598A /* HomeDetailViewModelProtocol.swift */; };
 		BFC93E2E2297AC510077598A /* BusinessCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E2D2297AC510077598A /* BusinessCellViewModelProtocol.swift */; };
+		BFC93E302297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E2F2297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift */; };
+		BFC93E322297B2B20077598A /* HomeSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E312297B2B20077598A /* HomeSearchResultsCell.swift */; };
+		BFC93E3E2297B39E0077598A /* UICollectionView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E352297B39E0077598A /* UICollectionView+StoryboardIdentifiable.swift */; };
+		BFC93E3F2297B39E0077598A /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E362297B39E0077598A /* UICollectionReusableView+StoryboardIdentifiable.swift */; };
+		BFC93E402297B39E0077598A /* UIStoryboard+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E372297B39E0077598A /* UIStoryboard+StoryboardIdentifiable.swift */; };
+		BFC93E412297B39E0077598A /* StoryboardIdentifiable+Self.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E382297B39E0077598A /* StoryboardIdentifiable+Self.swift */; };
+		BFC93E422297B39E0077598A /* UITableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E392297B39E0077598A /* UITableView+StoryboardIdentifiable.swift */; };
+		BFC93E432297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E3A2297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift */; };
+		BFC93E442297B39E0077598A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E3B2297B39E0077598A /* UIStoryboardSegue+StoryboardIdentifiable.swift */; };
+		BFC93E452297B39E0077598A /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E3C2297B39E0077598A /* StoryboardIdentifiable.swift */; };
+		BFC93E462297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E3D2297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +98,17 @@
 		BFC93E292297AB970077598A /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		BFC93E2B2297ABEC0077598A /* HomeDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		BFC93E2D2297AC510077598A /* BusinessCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		BFC93E2F2297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewModelProtocol.swift; sourceTree = "<group>"; };
+		BFC93E312297B2B20077598A /* HomeSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsCell.swift; sourceTree = "<group>"; };
+		BFC93E352297B39E0077598A /* UICollectionView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFC93E362297B39E0077598A /* UICollectionReusableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFC93E372297B39E0077598A /* UIStoryboard+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFC93E382297B39E0077598A /* StoryboardIdentifiable+Self.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+Self.swift"; sourceTree = "<group>"; };
+		BFC93E392297B39E0077598A /* UITableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFC93E3A2297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFC93E3B2297B39E0077598A /* UIStoryboardSegue+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFC93E3C2297B39E0077598A /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		BFC93E3D2297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +210,9 @@
 		5ABB14AE2167C62400A2CB2C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BFC93E122297A0780077598A /* Networking */,
 				BFC93E0A229795470077598A /* Screens */,
+				BFC93E122297A0780077598A /* Networking */,
+				BFC93E332297B34F0077598A /* Utilities */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -256,6 +279,8 @@
 			children = (
 				BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */,
 				BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */,
+				BFC93E2F2297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift */,
+				BFC93E312297B2B20077598A /* HomeSearchResultsCell.swift */,
 			);
 			path = "Search Results";
 			sourceTree = "<group>";
@@ -297,6 +322,30 @@
 				BFC93E2B2297ABEC0077598A /* HomeDetailViewModelProtocol.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		BFC93E332297B34F0077598A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BFC93E342297B3910077598A /* Storyboard */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BFC93E342297B3910077598A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BFC93E3C2297B39E0077598A /* StoryboardIdentifiable.swift */,
+				BFC93E382297B39E0077598A /* StoryboardIdentifiable+Self.swift */,
+				BFC93E362297B39E0077598A /* UICollectionReusableView+StoryboardIdentifiable.swift */,
+				BFC93E352297B39E0077598A /* UICollectionView+StoryboardIdentifiable.swift */,
+				BFC93E372297B39E0077598A /* UIStoryboard+StoryboardIdentifiable.swift */,
+				BFC93E3B2297B39E0077598A /* UIStoryboardSegue+StoryboardIdentifiable.swift */,
+				BFC93E392297B39E0077598A /* UITableView+StoryboardIdentifiable.swift */,
+				BFC93E3A2297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift */,
+				BFC93E3D2297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,20 +554,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */,
+				BFC93E302297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift in Sources */,
 				BFC93E272297A8650077598A /* YelpNetworking.swift in Sources */,
 				BFC93E2C2297ABED0077598A /* HomeDetailViewModelProtocol.swift in Sources */,
+				BFC93E432297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
 				BFC93E1A2297A5040077598A /* NetworkingRequest.swift in Sources */,
 				BFC93E1C2297A53A0077598A /* NetworkingRequestHTTPMethod.swift in Sources */,
 				5ABB14812167C42300A2CB2C /* FavoritesViewController.swift in Sources */,
 				BFC93E202297A65B0077598A /* YelpNetworkingTarget.swift in Sources */,
 				BFC93E252297A8450077598A /* Yelp.swift in Sources */,
+				BFC93E322297B2B20077598A /* HomeSearchResultsCell.swift in Sources */,
 				BFC93E2E2297AC510077598A /* BusinessCellViewModelProtocol.swift in Sources */,
+				BFC93E442297B39E0077598A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
+				BFC93E422297B39E0077598A /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFC93E142297A08C0077598A /* Networking.swift in Sources */,
+				BFC93E462297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				5ABB14BE2167D2D900A2CB2C /* BusinessCell.swift in Sources */,
+				BFC93E452297B39E0077598A /* StoryboardIdentifiable.swift in Sources */,
+				BFC93E3E2297B39E0077598A /* UICollectionView+StoryboardIdentifiable.swift in Sources */,
+				BFC93E402297B39E0077598A /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
 				5ABB147D2167C42300A2CB2C /* AppDelegate.swift in Sources */,
 				5ABB147F2167C42300A2CB2C /* HomeViewController.swift in Sources */,
+				BFC93E3F2297B39E0077598A /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */,
 				5ABB14BC2167CF2400A2CB2C /* HomeDetailViewController.swift in Sources */,
 				BFC93E2A2297AB970077598A /* HomeViewModelProtocol.swift in Sources */,
+				BFC93E412297B39E0077598A /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFC93E182297A1920077598A /* YelpNetworkingResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
