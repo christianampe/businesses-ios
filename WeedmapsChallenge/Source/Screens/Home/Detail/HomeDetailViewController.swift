@@ -5,16 +5,12 @@
 import UIKit
 import WebKit
 
-
 class HomeDetailViewController: UIViewController {
-
-    // MARK: Properties
-    
     @IBOutlet private var webView: WKWebView!
-    
-    // MARK: Control
-    
-    func configure(with business: Business) {
-        // IMPLEMENT
+}
+
+extension HomeDetailViewController {
+    func configure(with business: HomeDetailViewModelProtocol) {
+        
     }
 }

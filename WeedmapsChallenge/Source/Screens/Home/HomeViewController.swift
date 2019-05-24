@@ -8,10 +8,9 @@ class HomeViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
     
     private var searchController = UISearchController(searchResultsController: nil)
-    private var searchResults = [Business]()
+    private var searchResults: HomeViewModelProtocol?
     private var searchDataTask: URLSessionDataTask?
 }
-
 
 // MARK: - Lifecycle
 extension HomeViewController {

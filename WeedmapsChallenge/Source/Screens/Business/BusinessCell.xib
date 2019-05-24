@@ -43,6 +43,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="2TO-Pi-HIN"/>
             <size key="customSize" width="192" height="169"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="jX6-EP-bNL" id="4ge-iu-gaX"/>
+                <outlet property="imageView" destination="QWg-NT-WQo" id="NBC-9l-Gx2"/>
+            </connections>
             <point key="canvasLocation" x="84.799999999999997" y="32.383808095952027"/>
         </collectionViewCell>
     </objects>
