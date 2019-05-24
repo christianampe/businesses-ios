@@ -22,9 +22,8 @@
 		5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */; };
 		5ABB14C22167D50300A2CB2C /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C12167D50300A2CB2C /* Favorites.storyboard */; };
 		5ABB14C42167D51000A2CB2C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C32167D51000A2CB2C /* Home.storyboard */; };
-		83F2EE110FEB76E98D470071 /* Pods_WeedmapsChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2924EE8CDB2883B99F30392F /* Pods_WeedmapsChallenge.framework */; };
-		97DCB0C0B7D94828B391FC2A /* Pods_WeedmapsChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C87C8E727A397680DC3145 /* Pods_WeedmapsChallengeTests.framework */; };
-		A0F8F636CB8726F4C1A29A54 /* Pods_WeedmapsChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5898BC9F75F4500EBDA9E2 /* Pods_WeedmapsChallengeUITests.framework */; };
+		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
+		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2924EE8CDB2883B99F30392F /* Pods_WeedmapsChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeedmapsChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38478237138C959D80C9A482 /* Pods-WeedmapsChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeedmapsChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeedmapsChallenge/Pods-WeedmapsChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		390EF1E81C998005AB3BF156 /* Pods-WeedmapsChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeedmapsChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeedmapsChallengeUITests/Pods-WeedmapsChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		56C27B4D035F963BB6BE4684 /* Pods-WeedmapsChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeedmapsChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeedmapsChallengeUITests/Pods-WeedmapsChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A1AC182216D668500E15B8F /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		5ABB14792167C42300A2CB2C /* WeedmapsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeedmapsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ABB147C2167C42300A2CB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,11 +65,8 @@
 		5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 		5ABB14C12167D50300A2CB2C /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		5ABB14C32167D51000A2CB2C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		61A720788174F8C549A2BB73 /* Pods-WeedmapsChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeedmapsChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeedmapsChallenge/Pods-WeedmapsChallenge.release.xcconfig"; sourceTree = "<group>"; };
-		7E5898BC9F75F4500EBDA9E2 /* Pods_WeedmapsChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeedmapsChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F41E6A3E83D6BEDB401171 /* Pods-WeedmapsChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeedmapsChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeedmapsChallengeTests/Pods-WeedmapsChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
-		E5CD667392B1B4ABFB0BC0A3 /* Pods-WeedmapsChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeedmapsChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeedmapsChallengeTests/Pods-WeedmapsChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E7C87C8E727A397680DC3145 /* Pods_WeedmapsChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeedmapsChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83F2EE110FEB76E98D470071 /* Pods_WeedmapsChallenge.framework in Frameworks */,
+				BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */,
+				BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DCB0C0B7D94828B391FC2A /* Pods_WeedmapsChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,23 +90,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F8F636CB8726F4C1A29A54 /* Pods_WeedmapsChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1523607573D9F740B566DF3D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2924EE8CDB2883B99F30392F /* Pods_WeedmapsChallenge.framework */,
-				E7C87C8E727A397680DC3145 /* Pods_WeedmapsChallengeTests.framework */,
-				7E5898BC9F75F4500EBDA9E2 /* Pods_WeedmapsChallengeUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5ABB14702167C42300A2CB2C = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +103,7 @@
 				5ABB14922167C42700A2CB2C /* WeedmapsChallengeTests */,
 				5ABB149D2167C42700A2CB2C /* WeedmapsChallengeUITests */,
 				5ABB147A2167C42300A2CB2C /* Products */,
-				FA453FA14D74C5D61318180A /* Pods */,
-				1523607573D9F740B566DF3D /* Frameworks */,
+				BFC93E03229793B20077598A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +120,7 @@
 		5ABB147B2167C42300A2CB2C /* WeedmapsChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				5ABB14B12167C65000A2CB2C /* Assets */,
+				5ABB14B12167C65000A2CB2C /* Storages */,
 				5ABB14AE2167C62400A2CB2C /* Sources */,
 			);
 			path = WeedmapsChallenge;
@@ -187,22 +167,9 @@
 		5ABB14AE2167C62400A2CB2C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5ABB14B32167C6DA00A2CB2C /* Business */,
-				5ABB14AF2167C63000A2CB2C /* Bootstrap */,
-				5ABB14AD2167C5E600A2CB2C /* Favorites */,
-				5ABB14AC2167C5DD00A2CB2C /* Home */,
-				5ABB14B02167C64100A2CB2C /* Navigation */,
+				BFC93E0A229795470077598A /* Screens */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		5ABB14AF2167C63000A2CB2C /* Bootstrap */ = {
-			isa = PBXGroup;
-			children = (
-				5ABB147C2167C42300A2CB2C /* AppDelegate.swift */,
-				5ABB14872167C42600A2CB2C /* LaunchScreen.storyboard */,
-			);
-			path = Bootstrap;
 			sourceTree = "<group>";
 		};
 		5ABB14B02167C64100A2CB2C /* Navigation */ = {
@@ -213,21 +180,13 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		5ABB14B12167C65000A2CB2C /* Assets */ = {
+		5ABB14B12167C65000A2CB2C /* Storages */ = {
 			isa = PBXGroup;
 			children = (
 				5ABB14852167C42600A2CB2C /* Assets.xcassets */,
-				5ABB14B22167C68300A2CB2C /* Plists */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		5ABB14B22167C68300A2CB2C /* Plists */ = {
-			isa = PBXGroup;
-			children = (
 				5ABB148A2167C42600A2CB2C /* WeedmapsChallenge-Info.plist */,
 			);
-			path = Plists;
+			path = Storages;
 			sourceTree = "<group>";
 		};
 		5ABB14B32167C6DA00A2CB2C /* Business */ = {
@@ -240,17 +199,34 @@
 			path = Business;
 			sourceTree = "<group>";
 		};
-		FA453FA14D74C5D61318180A /* Pods */ = {
+		BFC93E03229793B20077598A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38478237138C959D80C9A482 /* Pods-WeedmapsChallenge.debug.xcconfig */,
-				61A720788174F8C549A2BB73 /* Pods-WeedmapsChallenge.release.xcconfig */,
-				E5CD667392B1B4ABFB0BC0A3 /* Pods-WeedmapsChallengeTests.debug.xcconfig */,
-				D7F41E6A3E83D6BEDB401171 /* Pods-WeedmapsChallengeTests.release.xcconfig */,
-				56C27B4D035F963BB6BE4684 /* Pods-WeedmapsChallengeUITests.debug.xcconfig */,
-				390EF1E81C998005AB3BF156 /* Pods-WeedmapsChallengeUITests.release.xcconfig */,
+				BFC93E05229793B20077598A /* Alamofire.framework */,
+				BFC93E04229793B20077598A /* Kingfisher.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFC93E09229794BF0077598A /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				5ABB14872167C42600A2CB2C /* LaunchScreen.storyboard */,
+				5ABB147C2167C42300A2CB2C /* AppDelegate.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		BFC93E0A229795470077598A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BFC93E09229794BF0077598A /* Launch */,
+				5ABB14B02167C64100A2CB2C /* Navigation */,
+				5ABB14AC2167C5DD00A2CB2C /* Home */,
+				5ABB14B32167C6DA00A2CB2C /* Business */,
+				5ABB14AD2167C5E600A2CB2C /* Favorites */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,11 +236,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ABB14A32167C42700A2CB2C /* Build configuration list for PBXNativeTarget "WeedmapsChallenge" */;
 			buildPhases = (
-				E166F8691E1E199943877682 /* [CP] Check Pods Manifest.lock */,
 				5ABB14752167C42300A2CB2C /* Sources */,
 				5ABB14762167C42300A2CB2C /* Frameworks */,
 				5ABB14772167C42300A2CB2C /* Resources */,
-				F9C611B82A31399D7C0FA903 /* [CP] Embed Pods Frameworks */,
+				BFC93E08229793C90077598A /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -409,6 +384,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BFC93E08229793C90077598A /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)//Carthage/Build/iOS/Kingfisher.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		C8DA347DD1AF5B09BC1901DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,50 +424,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E166F8691E1E199943877682 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WeedmapsChallenge-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9C611B82A31399D7C0FA903 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WeedmapsChallenge/Pods-WeedmapsChallenge-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeedmapsChallenge/Pods-WeedmapsChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -661,12 +612,15 @@
 		};
 		5ABB14A42167C42700A2CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38478237138C959D80C9A482 /* Pods-WeedmapsChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9UES6HSTC;
-				INFOPLIST_FILE = "$(SRCROOT)/WeedmapsChallenge/Assets/Plists/WeedmapsChallenge-Info.plist";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/WeedmapsChallenge/Storages/WeedmapsChallenge-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,12 +634,15 @@
 		};
 		5ABB14A52167C42700A2CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A720788174F8C549A2BB73 /* Pods-WeedmapsChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9UES6HSTC;
-				INFOPLIST_FILE = "$(SRCROOT)/WeedmapsChallenge/Assets/Plists/WeedmapsChallenge-Info.plist";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/WeedmapsChallenge/Storages/WeedmapsChallenge-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,7 +656,6 @@
 		};
 		5ABB14A72167C42700A2CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5CD667392B1B4ABFB0BC0A3 /* Pods-WeedmapsChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,7 +677,6 @@
 		};
 		5ABB14A82167C42700A2CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7F41E6A3E83D6BEDB401171 /* Pods-WeedmapsChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -743,7 +698,6 @@
 		};
 		5ABB14AA2167C42700A2CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56C27B4D035F963BB6BE4684 /* Pods-WeedmapsChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -764,7 +718,6 @@
 		};
 		5ABB14AB2167C42700A2CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 390EF1E81C998005AB3BF156 /* Pods-WeedmapsChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
