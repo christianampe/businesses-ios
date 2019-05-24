@@ -1,0 +1,7 @@
+REQUEST TYPE:  GET
+BASE URL:      https://api.yelp.com/v3
+PATH:          /autocomplete
+HEADERS:       "Authorization": Bearer API_KEY
+PARAMS:        "text": STRING
+               "latitude": DECIMAL
+               "longitude": DECIMAL

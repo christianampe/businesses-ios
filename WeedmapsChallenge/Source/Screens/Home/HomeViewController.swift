@@ -4,28 +4,31 @@
 
 import UIKit
 
-
 class HomeViewController: UIViewController {
-
-    // MARK: Properties
-    
     @IBOutlet private var collectionView: UICollectionView!
     
     private var searchController = UISearchController(searchResultsController: nil)
     private var searchResults = [Business]()
     private var searchDataTask: URLSessionDataTask?
-    
-    // MARK: Lifecycle
-    
+}
+
+
+// MARK: - Lifecycle
+extension HomeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-// MARK: UISearchResultsUpdating
+// MARK: - Setup Methods
+private extension HomeViewController {
+    func setUp() {
+        navigationItem.searchController = searchController
+    }
+}
 
+// MARK: - UISearchResultsUpdating
 extension HomeViewController: UISearchResultsUpdating {
-
     func updateSearchResults(for searchController: UISearchController) {
         // IMPLEMENT: Be sure to consider things like network errors
         // and possible rate limiting from the Yelp API. If the user types
@@ -34,10 +37,11 @@ extension HomeViewController: UISearchResultsUpdating {
     }
 }
 
-// MARK: UICollectionViewDelegate
-
+// MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
         // IMPLEMENT:
         // 1a) Present the user with a UIAlertController (action sheet style) with options
         // to either display the Business's Yelp page in a WKWebView OR bump the user out to
@@ -45,15 +49,18 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
-// MARK: UICollectionViewDataSource
-
+// MARK: - UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        
         // IMPLEMENT:
         return 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         // IMPLEMENT:
         return UICollectionViewCell()
     }
