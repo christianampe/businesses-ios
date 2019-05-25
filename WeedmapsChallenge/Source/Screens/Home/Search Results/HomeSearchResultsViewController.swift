@@ -8,23 +8,13 @@
 
 import UIKit
 
-protocol HomeSearchResultsViewControllerDataSource: class {
-    
-}
-
-protocol HomeSearchResultsViewControllerDelegate: class {
-    
-}
-
 class HomeSearchResultsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: HomeSearchResultsViewModelProtocol?
-    
-    weak var dataSource: HomeSearchResultsViewControllerDataSource?
-    weak var delegate: HomeSearchResultsViewControllerDelegate?
 }
 
+// MARK: - Lifecycle
 extension HomeSearchResultsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +22,22 @@ extension HomeSearchResultsViewController {
     }
 }
 
+// MARK: - Public API
+extension HomeSearchResultsViewController {
+    func set(properties newViewModel: HomeSearchResultsViewModelProtocol) {
+        viewModel = newViewModel
+        tableView.reloadData()
+    }
+}
+
+// MARK: - Helper Methods
 private extension HomeSearchResultsViewController {
     func configure() {
         
     }
 }
 
+// MARK: - UITableViewDataSource
 extension HomeSearchResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +52,7 @@ extension HomeSearchResultsViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension HomeSearchResultsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    willDisplay cell: UITableViewCell,
@@ -61,5 +62,10 @@ extension HomeSearchResultsViewController: UITableViewDelegate {
             assertionFailure("incorrect cell used")
             return
         }
+        
+        guard let viewModel = viewModel else {
+            return
+        }
+        
     }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MHy-h5-3j7">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XUf-1D-8TD">
+            <objects>
+                <viewController id="MHy-h5-3j7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VPL-0e-AIq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cu-of-iUV">
+                                <rect key="frame" x="-6" y="267" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MHy-h5-3j7" id="GuK-7c-bcF"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="24S-ba-OdK"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="f5M-MJ-dVH" id="Z8w-eh-pLR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auj-8Y-lq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="f5M-MJ-dVH">
+                    <connections>
+                        <outlet property="delegate" destination="MHy-h5-3j7" id="dgB-fj-fqt"/>
+                        <outlet property="searchBar" destination="2Cu-of-iUV" id="6UH-tZ-9Wh"/>
+                        <outlet property="searchContentsController" destination="MHy-h5-3j7" id="Ief-f3-pWB"/>
+                        <outlet property="searchResultsDataSource" destination="MHy-h5-3j7" id="jId-fa-mFE"/>
+                        <outlet property="searchResultsDelegate" destination="MHy-h5-3j7" id="Zc2-WZ-ACF"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="65" y="146"/>
+        </scene>
+    </scenes>
+</document>

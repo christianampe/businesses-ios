@@ -20,6 +20,8 @@
 		5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */; };
 		5ABB14C22167D50300A2CB2C /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C12167D50300A2CB2C /* Favorites.storyboard */; };
 		5ABB14C42167D51000A2CB2C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C32167D51000A2CB2C /* Home.storyboard */; };
+		BF1FEE6E22999319003A7F67 /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */; };
+		BF1FEE7022999449003A7F67 /* HomeSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1FEE6F22999449003A7F67 /* HomeSearch.storyboard */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
@@ -84,6 +86,8 @@
 		5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 		5ABB14C12167D50300A2CB2C /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		5ABB14C32167D51000A2CB2C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
+		BF1FEE6F22999449003A7F67 /* HomeSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSearch.storyboard; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 				5ABB14C32167D51000A2CB2C /* Home.storyboard */,
 				5ABB147E2167C42300A2CB2C /* HomeViewController.swift */,
 				BFC93E292297AB970077598A /* HomeViewModelProtocol.swift */,
+				BF1FEE6C229992F3003A7F67 /* Search */,
 				BFC93E0F22979B280077598A /* Search Results */,
 				BFC93E282297AB260077598A /* Detail */,
 			);
@@ -242,6 +247,15 @@
 				BFC93E2D2297AC510077598A /* BusinessCellViewModelProtocol.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		BF1FEE6C229992F3003A7F67 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FEE6F22999449003A7F67 /* HomeSearch.storyboard */,
+				BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		BFC93E03229793B20077598A /* Frameworks */ = {
@@ -458,6 +472,7 @@
 				BFC93E1122979B3A0077598A /* HomeSearchResults.storyboard in Resources */,
 				5ABB14892167C42600A2CB2C /* LaunchScreen.storyboard in Resources */,
 				5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */,
+				BF1FEE7022999449003A7F67 /* HomeSearch.storyboard in Resources */,
 				5ABB14862167C42600A2CB2C /* Assets.xcassets in Resources */,
 				5ABB14C42167D51000A2CB2C /* Home.storyboard in Resources */,
 				5ABB14842167C42400A2CB2C /* Main.storyboard in Resources */,
@@ -560,6 +575,7 @@
 				BFC93E432297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
 				BFC93E1A2297A5040077598A /* NetworkingRequest.swift in Sources */,
 				BFC93E1C2297A53A0077598A /* NetworkingRequestHTTPMethod.swift in Sources */,
+				BF1FEE6E22999319003A7F67 /* HomeSearchViewController.swift in Sources */,
 				5ABB14812167C42300A2CB2C /* FavoritesViewController.swift in Sources */,
 				BFC93E202297A65B0077598A /* YelpNetworkingTarget.swift in Sources */,
 				BFC93E252297A8450077598A /* Yelp.swift in Sources */,
