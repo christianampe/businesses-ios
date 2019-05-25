@@ -18,20 +18,10 @@ protocol HomeSearchViewControllerDelegate: class {
 
 class HomeSearchViewController: UIViewController {
     private var searchController: UISearchController?
-    private lazy var searchResultsViewController: HomeSearchResultsViewController = {
-        
-    }()
+    private var searchResultsViewController: HomeSearchResultsViewController?
     
     var dataSource: HomeSearchViewControllerDataSource?
     var delegate: HomeSearchViewControllerDelegate?
-    
-    init(_ navigationItem: UINavigationItem) {
-        navigationItem.searchController = searchController
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 
 // MARK: - Lifecycle

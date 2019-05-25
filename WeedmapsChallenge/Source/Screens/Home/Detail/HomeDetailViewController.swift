@@ -12,7 +12,7 @@ class HomeDetailViewController: UIViewController {
 }
 
 extension HomeDetailViewController {
-    func configure(with business: HomeDetailViewModelProtocol) {
-        
+    func configure(with newViewModel: HomeDetailViewModelProtocol) {
+        viewModel = newViewModel
     }
 }

@@ -7,12 +7,14 @@ import UIKit
 class BusinessCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    private var viewModel: BusinessCellViewModelProtocol?
 }
 
 // MARK: - Public API
 extension BusinessCell {
-    func configure(with viewModel: BusinessCellViewModelProtocol) {
-        
+    func configure(with newViewModel: BusinessCellViewModelProtocol) {
+        viewModel = newViewModel
     }
 }
 

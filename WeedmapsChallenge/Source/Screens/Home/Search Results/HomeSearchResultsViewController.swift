@@ -8,10 +8,28 @@
 
 import UIKit
 
+protocol HomeSearchResultsViewControllerDataSource: class {
+    
+}
+
+protocol HomeSearchResultsViewControllerDelegate: class {
+    func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
+                                         didSelectSearchResult searchResult: String)
+}
+
+extension HomeSearchResultsViewControllerDelegate {
+    func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
+                                         didSelectSearchResult searchResult: String) {}
+}
+
+
 class HomeSearchResultsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: HomeSearchResultsViewModelProtocol?
+    
+    var dataSource: HomeSearchResultsViewControllerDataSource?
+    var delegate: HomeSearchResultsViewControllerDelegate?
 }
 
 // MARK: - Lifecycle
@@ -63,9 +81,21 @@ extension HomeSearchResultsViewController: UITableViewDelegate {
             return
         }
         
-        guard let viewModel = viewModel else {
+        guard let viewModel = viewModel?.autocompleteSearches[indexPath.row] else {
             return
         }
         
+        
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        
+        guard let searchResult = viewModel?.autocompleteSearches[indexPath.row] else {
+            return
+        }
+        
+        delegate?.homeSearchResultsViewController(self,
+                                                  didSelectSearchResult: searchResult)
     }
 }

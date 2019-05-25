@@ -8,6 +8,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
     
     private var searchController: HomeSearchViewController?
+    
     private var viewModel: HomeViewModelProtocol?
 }
 
@@ -47,7 +48,16 @@ extension HomeViewController: UICollectionViewDelegate {
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         
+        guard let cell = cell as? BusinessCell else {
+            assertionFailure("incorrect cell type used")
+            return
+        }
         
+        guard let viewModel = viewModel?.businesses[indexPath.row] else {
+            return
+        }
+        
+        cell.configure(with: viewModel)
     }
     
     func collectionView(_ collectionView: UICollectionView,
