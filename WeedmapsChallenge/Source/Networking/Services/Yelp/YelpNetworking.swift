@@ -9,7 +9,7 @@
 import Foundation
 
 extension Yelp {
-    class Networking {
+    enum Networking {
         
     }
 }

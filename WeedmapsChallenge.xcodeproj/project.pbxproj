@@ -201,7 +201,6 @@
 				5ABB147E2167C42300A2CB2C /* HomeViewController.swift */,
 				BFC93E292297AB970077598A /* HomeViewModelProtocol.swift */,
 				BF1FEE6C229992F3003A7F67 /* Search */,
-				BFC93E0F22979B280077598A /* Search Results */,
 				BFC93E282297AB260077598A /* Detail */,
 			);
 			path = Home;
@@ -257,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */,
+				BFC93E0F22979B280077598A /* Search Results */,
 			);
 			path = Search;
 			sourceTree = "<group>";

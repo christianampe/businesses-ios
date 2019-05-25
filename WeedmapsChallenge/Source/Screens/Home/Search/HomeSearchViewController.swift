@@ -8,19 +8,20 @@
 
 import UIKit
 
-protocol HomeSearchViewControllerDataSource: class {
-    
+protocol HomeSearchViewControllerDelegate: class {
+    func homeSearchViewController(_ homeSearchViewController: HomeSearchViewController,
+                                  didSelectSearchResult searchResult: String)
 }
 
-protocol HomeSearchViewControllerDelegate: class {
-    
+extension HomeSearchViewControllerDelegate {
+    func homeSearchViewController(_ homeSearchViewController: HomeSearchViewController,
+                                  didSelectSearchResult searchResult: String) {}
 }
 
 class HomeSearchViewController: UIViewController {
-    private var searchController: UISearchController?
     private var searchResultsViewController: HomeSearchResultsViewController?
+    private var searchController: UISearchController?
     
-    var dataSource: HomeSearchViewControllerDataSource?
     var delegate: HomeSearchViewControllerDelegate?
 }
 
@@ -28,18 +29,26 @@ class HomeSearchViewController: UIViewController {
 extension HomeSearchViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
     }
 }
 
 // MARK: - Helper Methods
 private extension HomeSearchViewController {
     func configure() {
+        let searchResultsViewController: HomeSearchResultsViewController = UIStoryboard(storyboard: .homeSearchResults).instantiateViewController()
+        let searchController = UISearchController(searchResultsController: searchResultsViewController)
         
+        searchResultsViewController.delegate = self
+        searchController.searchBar.delegate = self
+        
+        self.searchResultsViewController = searchResultsViewController
+        self.searchController = searchController
     }
 }
 
 // MARK: - UISearchResultsUpdating
-extension HomeSearchViewController: UISearchResultsUpdating {
+extension HomeSearchViewController: UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         
     }
@@ -52,6 +61,12 @@ extension HomeSearchViewController: UISearchBarDelegate {
     }
 }
 
-extension HomeSearchViewController {
-    
+// MARK: - HomeSearchResultsViewControllerDelegate
+extension HomeSearchViewController: HomeSearchResultsViewControllerDelegate {
+    func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
+                                         didSelectSearchResult searchResult: String) {
+        
+        delegate?.homeSearchViewController(self,
+                                           didSelectSearchResult: searchResult)
+    }
 }

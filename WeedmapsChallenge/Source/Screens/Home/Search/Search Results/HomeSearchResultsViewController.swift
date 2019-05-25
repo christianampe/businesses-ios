@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol HomeSearchResultsViewControllerDataSource: class {
-    
-}
-
 protocol HomeSearchResultsViewControllerDelegate: class {
     func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
                                          didSelectSearchResult searchResult: String)
@@ -28,7 +24,6 @@ class HomeSearchResultsViewController: UIViewController {
     
     private var viewModel: HomeSearchResultsViewModelProtocol?
     
-    var dataSource: HomeSearchResultsViewControllerDataSource?
     var delegate: HomeSearchResultsViewControllerDelegate?
 }
 
@@ -85,7 +80,7 @@ extension HomeSearchResultsViewController: UITableViewDelegate {
             return
         }
         
-        
+        cell.configure(with: viewModel)
     }
     
     func tableView(_ tableView: UITableView,

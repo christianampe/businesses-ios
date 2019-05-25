@@ -8,6 +8,6 @@
 
 import Foundation
 
-final class Yelp {
+enum Yelp {
     
 }
