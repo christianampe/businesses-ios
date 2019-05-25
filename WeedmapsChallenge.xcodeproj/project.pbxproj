@@ -21,7 +21,9 @@
 		5ABB14C22167D50300A2CB2C /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C12167D50300A2CB2C /* Favorites.storyboard */; };
 		5ABB14C42167D51000A2CB2C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C32167D51000A2CB2C /* Home.storyboard */; };
 		BF1FEE6E22999319003A7F67 /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */; };
-		BF1FEE7022999449003A7F67 /* HomeSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1FEE6F22999449003A7F67 /* HomeSearch.storyboard */; };
+		BF1FEE7422999E65003A7F67 /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE7222999E65003A7F67 /* SegueIdentifiable.swift */; };
+		BF1FEE7522999E65003A7F67 /* SegueIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE7322999E65003A7F67 /* SegueIdentifiable+UIViewController.swift */; };
+		BF1FEE7822999EF4003A7F67 /* UIStoryboard+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE7722999EF4003A7F67 /* UIStoryboard+Identifiers.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
@@ -87,7 +89,9 @@
 		5ABB14C12167D50300A2CB2C /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		5ABB14C32167D51000A2CB2C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
-		BF1FEE6F22999449003A7F67 /* HomeSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSearch.storyboard; sourceTree = "<group>"; };
+		BF1FEE7222999E65003A7F67 /* SegueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
+		BF1FEE7322999E65003A7F67 /* SegueIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
+		BF1FEE7722999EF4003A7F67 /* UIStoryboard+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifiers.swift"; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -252,10 +256,26 @@
 		BF1FEE6C229992F3003A7F67 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				BF1FEE6F22999449003A7F67 /* HomeSearch.storyboard */,
 				BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		BF1FEE7122999E4D003A7F67 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FEE7222999E65003A7F67 /* SegueIdentifiable.swift */,
+				BF1FEE7322999E65003A7F67 /* SegueIdentifiable+UIViewController.swift */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
+		BF1FEE7622999EDA003A7F67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FEE7722999EF4003A7F67 /* UIStoryboard+Identifiers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BFC93E03229793B20077598A /* Frameworks */ = {
@@ -341,7 +361,9 @@
 		BFC93E332297B34F0077598A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BF1FEE7622999EDA003A7F67 /* Extensions */,
 				BFC93E342297B3910077598A /* Storyboard */,
+				BF1FEE7122999E4D003A7F67 /* Segue */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -472,7 +494,6 @@
 				BFC93E1122979B3A0077598A /* HomeSearchResults.storyboard in Resources */,
 				5ABB14892167C42600A2CB2C /* LaunchScreen.storyboard in Resources */,
 				5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */,
-				BF1FEE7022999449003A7F67 /* HomeSearch.storyboard in Resources */,
 				5ABB14862167C42600A2CB2C /* Assets.xcassets in Resources */,
 				5ABB14C42167D51000A2CB2C /* Home.storyboard in Resources */,
 				5ABB14842167C42400A2CB2C /* Main.storyboard in Resources */,
@@ -568,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1FEE7422999E65003A7F67 /* SegueIdentifiable.swift in Sources */,
 				BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */,
 				BFC93E302297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift in Sources */,
 				BFC93E272297A8650077598A /* YelpNetworking.swift in Sources */,
@@ -582,6 +604,7 @@
 				BFC93E322297B2B20077598A /* HomeSearchResultsCell.swift in Sources */,
 				BFC93E2E2297AC510077598A /* BusinessCellViewModelProtocol.swift in Sources */,
 				BFC93E442297B39E0077598A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
+				BF1FEE7822999EF4003A7F67 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFC93E422297B39E0077598A /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFC93E142297A08C0077598A /* Networking.swift in Sources */,
 				BFC93E462297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
@@ -595,6 +618,7 @@
 				5ABB14BC2167CF2400A2CB2C /* HomeDetailViewController.swift in Sources */,
 				BFC93E2A2297AB970077598A /* HomeViewModelProtocol.swift in Sources */,
 				BFC93E412297B39E0077598A /* StoryboardIdentifiable+Self.swift in Sources */,
+				BF1FEE7522999E65003A7F67 /* SegueIdentifiable+UIViewController.swift in Sources */,
 				BFC93E182297A1920077598A /* YelpNetworkingResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

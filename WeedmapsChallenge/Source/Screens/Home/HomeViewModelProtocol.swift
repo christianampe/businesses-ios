@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeViewModelProtocol {
-    
+    var businesses: [BusinessCellViewModelProtocol] { get }
 }
