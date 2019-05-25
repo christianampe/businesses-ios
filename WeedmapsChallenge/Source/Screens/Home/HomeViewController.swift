@@ -67,11 +67,25 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard scrollView.contentOffset.y >= 0 else {
+            return
+        }
+        
+        guard scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) else {
+            return
+        }
+        
+        // todo: fetch more items
+    }
+}
+
 // MARK: - HomeSearchViewControllerDelegate
 extension HomeViewController: HomeSearchViewControllerDelegate {
     func homeSearchViewController(_ homeSearchViewController: HomeSearchViewController,
                                   didSelectSearchResult searchResult: String) {
         
-        // todo: fire off network request
+        // todo: fire off network request to get businesses
     }
 }

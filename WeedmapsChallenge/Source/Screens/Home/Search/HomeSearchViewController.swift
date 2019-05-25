@@ -50,7 +50,7 @@ private extension HomeSearchViewController {
 // MARK: - UISearchResultsUpdating
 extension HomeSearchViewController: UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        
+        // todo: fire off network request for a list of suggested searches
     }
 }
 

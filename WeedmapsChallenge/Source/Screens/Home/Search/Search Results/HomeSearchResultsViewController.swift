@@ -27,26 +27,11 @@ class HomeSearchResultsViewController: UIViewController {
     var delegate: HomeSearchResultsViewControllerDelegate?
 }
 
-// MARK: - Lifecycle
-extension HomeSearchResultsViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-}
-
 // MARK: - Public API
 extension HomeSearchResultsViewController {
     func set(properties newViewModel: HomeSearchResultsViewModelProtocol) {
         viewModel = newViewModel
         tableView.reloadData()
-    }
-}
-
-// MARK: - Helper Methods
-private extension HomeSearchResultsViewController {
-    func configure() {
-        
     }
 }
 
