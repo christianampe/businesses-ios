@@ -8,8 +8,45 @@
 
 import Foundation
 
+protocol YelpNetworkingProtocol: class {
+    static func autocomplete(for text: String,
+                             _ completion: @escaping (Result<Yelp.Networking.Responses.Autocomplete, Error>) -> Void)
+    
+    static func businessesSearch(for text: String,
+                                 _ completion: @escaping (Result<Yelp.Networking.Responses.BusinessesSearch, Error>) -> Void)
+}
+
 extension Yelp {
-    enum Networking {
+    class Networking: YelpNetworkingProtocol {
+        private static let provider = NetworkingProvider<Yelp.Networking.Target>()
+        private static let jsonDecoder = JSONDecoder()
+    }
+}
+
+extension Yelp.Networking {
+    static func autocomplete(for text: String,
+                             _ completion: @escaping (Result<Yelp.Networking.Responses.Autocomplete, Error>) -> Void) {
         
+        provider.request(.businessSearch) { result in
+            switch result {
+            case .success(let response):
+                
+            case .failure(let error):
+                
+            }
+        }
+    }
+    
+    static func businessesSearch(for text: String,
+                                 _ completion: @escaping (Result<Yelp.Networking.Responses.BusinessesSearch, Error>) -> Void) {
+        
+        provider.request(.businessSearch) { result in
+            switch result {
+            case .success(let response):
+                
+            case .failure(let error):
+                
+            }
+        }
     }
 }
