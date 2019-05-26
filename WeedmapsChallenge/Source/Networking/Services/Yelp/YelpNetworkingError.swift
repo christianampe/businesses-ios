@@ -1,17 +1,16 @@
 //
-//  NetworkingError.swift
+//  YelpNetworkingError.swift
 //  WeedmapsChallenge
 //
-//  Created by Christian Ampe on 5/25/19.
+//  Created by Christian Ampe on 5/26/19.
 //  Copyright © 2019 Weedmaps, LLC. All rights reserved.
 //
 
 import Foundation
 
-extension NetworkingProvider {
+extension Yelp.Networking {
     enum Error: Swift.Error {
-        
-        /// Returned when with the associated networking service error.
+        case mapping
         case service(NetworkingService.Error)
     }
 }

@@ -26,8 +26,7 @@ protocol NetworkingRequest {
     /// The headers to be used in the request.
     var headers: [String: String]? { get }
     
-    // The validation codes of the response.
-    var validation: NetworkingRequestValidation { get }
+    // TODO: include body implementation
 }
 
 // MARK: - Public Constructor

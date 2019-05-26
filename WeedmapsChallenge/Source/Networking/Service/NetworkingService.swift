@@ -8,13 +8,20 @@
 
 import Foundation
 
+protocol NetworkingServiceProtocol {
+    associatedtype R: NetworkingServiceResponseProtocol
+    associatedtype E: Swift.Error
+    
+    func request(_ request: URLRequest, completion: @escaping (Result<R, E>) -> Void)
+}
+
 class NetworkingService {
     
     /// URL session used to make all network requests.
     private let session = URLSession(configuration: .default)
 }
 
-extension NetworkingService {
+extension NetworkingService: NetworkingServiceProtocol {
     
     /// Core method for making a network request.
     ///

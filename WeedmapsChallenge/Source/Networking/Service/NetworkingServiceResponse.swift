@@ -8,8 +8,14 @@
 
 import Foundation
 
+protocol NetworkingServiceResponseProtocol {
+    var data: Data { get }
+    var request: URLRequest { get }
+    var response: HTTPURLResponse { get }
+}
+
 extension NetworkingService {
-    struct Response {
+    struct Response: NetworkingServiceResponseProtocol {
         
         /// Data returned from the network request.
         let data: Data

@@ -7,6 +7,14 @@
 
 import Foundation
 
+protocol NetworkingProviderProtocol {
+    associatedtype T: NetworkingRequest
+    associatedtype R: NetworkingServiceResponseProtocol
+    associatedtype E: Swift.Error
+    
+    func request(_ target: T, completion: @escaping (Result<R, E>) -> Void)
+}
+
 // MARK: - Networking Class
 class NetworkingProvider<T: NetworkingRequest> {
     
@@ -16,7 +24,7 @@ class NetworkingProvider<T: NetworkingRequest> {
 }
 
 // MARK: - Internal API
-extension NetworkingProvider {
+extension NetworkingProvider: NetworkingProviderProtocol {
     
     /// Request method used for requesting any service supported network calls.
     ///
@@ -33,14 +41,6 @@ extension NetworkingProvider {
             switch result {
                 
             case .success(let response):
-                
-                // validate response status code from specified request
-                guard target.validation.statusCodes.contains(response.response.statusCode) else {
-                    
-                    // invalid status code according to client
-                    completion(.failure(.validation(response)))
-                    return
-                }
                 
                 // successful result
                 completion(.success(response))

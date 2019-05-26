@@ -12,3 +12,8 @@ protocol HomeSearchResultsViewModelProtocol {
     var recentSearches: [String] { get }
     var autocompleteSearches: [String] { get }
 }
+
+struct HomeSearchResultsViewModel: HomeSearchResultsViewModelProtocol {
+    let recentSearches: [String]
+    let autocompleteSearches: [String]
+}

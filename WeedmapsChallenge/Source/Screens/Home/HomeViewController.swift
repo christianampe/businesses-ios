@@ -9,6 +9,8 @@ class HomeViewController: UIViewController {
     
     private var searchController: UISearchController?
     private var searchResultsViewController: HomeSearchResultsViewController?
+    
+    private lazy var yelpProvider = Yelp.Networking()
    
     private var viewModel: HomeViewModelProtocol?
 }
@@ -29,6 +31,7 @@ private extension HomeViewController {
         
         searchResultsViewController.delegate = self
         searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         
         self.searchResultsViewController = searchResultsViewController
         self.searchController = searchController
@@ -95,9 +98,30 @@ extension HomeViewController: UIScrollViewDelegate {
 }
 
 // MARK: - UISearchResultsUpdating
-extension HomeViewController: UISearchControllerDelegate {
+extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        // todo: fire off network request for a list of suggested searches
+        guard let searchText = searchController.searchBar.text else {
+            return
+        }
+        
+        yelpProvider.autocomplete(for: searchText) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    guard let titles = (response.categories?.compactMap { $0.title }) else {
+                        return
+                    }
+                    
+                    let viewModel = HomeSearchResultsViewModel(recentSearches: [],
+                                                               autocompleteSearches: titles)
+                    
+                    self?.searchResultsViewController?.set(properties:  viewModel)
+                    
+                case .failure(let error):
+                    break
+                }
+            }
+        }
     }
 }
 

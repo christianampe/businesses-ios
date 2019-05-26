@@ -29,6 +29,7 @@
 		BF1FEE96229A287F003A7F67 /* NetworkingServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE95229A287F003A7F67 /* NetworkingServiceResponse.swift */; };
 		BF1FEE9A229A29EA003A7F67 /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE99229A29EA003A7F67 /* NetworkingRequestValidation.swift */; };
 		BF1FEE9C229A2D6E003A7F67 /* NetworkingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE9B229A2D6E003A7F67 /* NetworkingProviderError.swift */; };
+		BF1FEE9F229AF480003A7F67 /* YelpNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE9E229AF480003A7F67 /* YelpNetworkingError.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
@@ -101,6 +102,7 @@
 		BF1FEE95229A287F003A7F67 /* NetworkingServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceResponse.swift; sourceTree = "<group>"; };
 		BF1FEE99229A29EA003A7F67 /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
 		BF1FEE9B229A2D6E003A7F67 /* NetworkingProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProviderError.swift; sourceTree = "<group>"; };
+		BF1FEE9E229AF480003A7F67 /* YelpNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpNetworkingError.swift; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				BFC93E262297A8650077598A /* YelpNetworking.swift */,
 				BFC93E1F2297A65B0077598A /* YelpNetworkingTarget.swift */,
 				BFC93E172297A1920077598A /* YelpNetworkingResponses.swift */,
+				BF1FEE9E229AF480003A7F67 /* YelpNetworkingError.swift */,
 			);
 			path = Yelp;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				BF1FEE7822999EF4003A7F67 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFC93E422297B39E0077598A /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFC93E142297A08C0077598A /* NetworkingProvider.swift in Sources */,
+				BF1FEE9F229AF480003A7F67 /* YelpNetworkingError.swift in Sources */,
 				BFC93E462297B39E0077598A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				BF1FEE9C229A2D6E003A7F67 /* NetworkingProviderError.swift in Sources */,
 				BF1FEE96229A287F003A7F67 /* NetworkingServiceResponse.swift in Sources */,
