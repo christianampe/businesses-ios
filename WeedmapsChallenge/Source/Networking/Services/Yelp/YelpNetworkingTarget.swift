@@ -10,8 +10,8 @@ import Foundation
 
 extension Yelp.Networking {
     enum Target: NetworkingRequest {
-        case autocomplete(text: String, latitude: Float, longitude: Float)
-        case businessSearch(String)
+        case autocomplete(text: String, latitude: Double, longitude: Double)
+        case businessSearch(text: String, latitude: Double, longitude: Double)
     }
 }
 
@@ -40,8 +40,10 @@ extension Yelp.Networking.Target {
             return ["text": text,
                     "latitude": "\(lat)",
                     "longitude": "\(long)"]
-        case .businessSearch:
-            return [:]
+        case .businessSearch(let text, let lat, let long):
+            return ["text": text,
+                    "latitude": "\(lat)",
+                    "longitude": "\(long)"]
         }
     }
     

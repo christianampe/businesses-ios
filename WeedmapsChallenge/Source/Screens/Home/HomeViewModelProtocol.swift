@@ -9,3 +9,7 @@
 protocol HomeViewModelProtocol {
     var businesses: [BusinessCellViewModelProtocol] { get }
 }
+
+struct HomeViewModel: HomeViewModelProtocol {
+    let businesses: [BusinessCellViewModelProtocol]
+}

@@ -137,6 +137,29 @@ extension HomeViewController: HomeSearchResultsViewControllerDelegate {
     func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
                                          didSelectSearchResult searchResult: String) {
         
-        // todo: fire off network request
+        yelpProvider.businessesSearch(for: searchResult) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.searchController?.isActive = false
+                
+                switch result {
+                case .success(let response):
+                    guard let businesses = response.businesses else {
+                        return
+                    }
+                    
+                    let viewModels = response.businesses?.map { BusinessCellViewModel(imageURLString: $0.imageUrl,
+                                                                                      detail: "\($0.name ?? "no name")\n\($0.displayPhone ?? "no phone")\n\($0.distance ?? -1)mi")
+                    }
+                    
+                    let viewModel = HomeViewModel(businesses: viewModels ?? [])
+                    
+                    self?.viewModel = viewModel
+                    self?.collectionView.reloadData()
+                    
+                case .failure(let error):
+                    break
+                }
+            }
+        }
     }
 }

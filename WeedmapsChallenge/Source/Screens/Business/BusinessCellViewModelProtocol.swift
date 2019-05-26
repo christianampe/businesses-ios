@@ -9,5 +9,11 @@
 import Foundation
 
 protocol BusinessCellViewModelProtocol {
-    
+    var imageURLString: String? { get }
+    var detail: String? { get }
+}
+
+struct BusinessCellViewModel: BusinessCellViewModelProtocol {
+    let imageURLString: String?
+    let detail: String?
 }

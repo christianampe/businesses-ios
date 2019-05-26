@@ -59,7 +59,7 @@ extension Yelp.Networking {
     func businessesSearch(for text: String,
                           _ completion: @escaping (Result<Yelp.Networking.Responses.BusinessesSearch, Error>) -> Void) {
         
-        provider.request(.businessSearch(text)) { [weak self] result in
+        provider.request(.businessSearch(text: text, latitude: 33.646942, longitude: -117.686104)) { [weak self] result in
             guard let self = self else { return }
             
             switch result {

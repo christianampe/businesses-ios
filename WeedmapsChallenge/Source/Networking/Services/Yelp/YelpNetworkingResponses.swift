@@ -56,7 +56,6 @@ extension Yelp.Networking.Responses.BusinessesSearch {
         let rating: Double?
         let reviewCount: Int?
         let url: String?
-        let transactions: [Transaction]?
     }
 }
 
@@ -66,12 +65,12 @@ extension Yelp.Networking.Responses.BusinessesSearch.Business {
         let title: String?
     }
     
-    struct Coordinates: Codable, Equatable {
+    struct Coordinates: Decodable, Equatable {
         let latitude: Double?
         let longitude: Double?
     }
     
-    struct Location: Codable, Equatable {
+    struct Location: Decodable, Equatable {
         let address1: String?
         let address2: String?
         let address3: String?
@@ -80,11 +79,5 @@ extension Yelp.Networking.Responses.BusinessesSearch.Business {
         let displayAddress: [String]?
         let state: String?
         let zipCode: String?
-    }
-    
-    enum Transaction: String, Decodable {
-        case pickup
-        case delivery
-        case restaurantReservation
     }
 }
