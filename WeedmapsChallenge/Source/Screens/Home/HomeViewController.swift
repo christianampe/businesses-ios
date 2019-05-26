@@ -28,6 +28,7 @@ private extension HomeViewController {
     func configure() {
         let searchResultsViewController: HomeSearchResultsViewController = UIStoryboard(storyboard: .homeSearchResults).instantiateViewController()
         let searchController = UISearchController(searchResultsController: searchResultsViewController)
+        let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         
         searchResultsViewController.delegate = self
         searchController.searchBar.delegate = self
@@ -40,6 +41,9 @@ private extension HomeViewController {
         definesPresentationContext = true
         
         collectionView.registerCollectionViewCell(xibCell: BusinessCell.self)
+        
+        flowLayout?.itemSize = UICollectionViewFlowLayout.automaticSize
+        flowLayout?.estimatedItemSize = CGSize(width: (collectionView.frame.width / 2) - 20, height: 100)
     }
 }
 
@@ -79,7 +83,19 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        // todo: show detail screen
+        guard let business = viewModel?.businesses[indexPath.row], let websiteURLString = business.websiteURLString else {
+            return
+        }
+        
+        let alertController = actionSheet(for: business.name,
+                                          at: websiteURLString)
+        
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = collectionView.cellForItem(at: indexPath)
+            popoverController.sourceRect = collectionView.cellForItem(at: indexPath)?.bounds ?? collectionView.bounds
+        }
+        
+        present(alertController, animated: true)
     }
 }
 
@@ -143,12 +159,12 @@ extension HomeViewController: HomeSearchResultsViewControllerDelegate {
                 
                 switch result {
                 case .success(let response):
-                    guard let businesses = response.businesses else {
-                        return
-                    }
-                    
-                    let viewModels = response.businesses?.map { BusinessCellViewModel(imageURLString: $0.imageUrl,
-                                                                                      detail: "\($0.name ?? "no name")\n\($0.displayPhone ?? "no phone")\n\($0.distance ?? -1)mi")
+                    let viewModels = response.businesses?.map { (business) -> HomeBusinessViewModel in
+                        let description = "\(business.name ?? "no name")\n\(business.displayPhone ?? "no phone number provided")"
+                        return HomeBusinessViewModel(name: business.name,
+                                                     detail: description,
+                                                     imageURLString: business.imageUrl,
+                                                     websiteURLString: business.url)
                     }
                     
                     let viewModel = HomeViewModel(businesses: viewModels ?? [])
@@ -161,5 +177,40 @@ extension HomeViewController: HomeSearchResultsViewControllerDelegate {
                 }
             }
         }
+    }
+}
+
+private extension HomeViewController {
+    func actionSheet(for businessName: String?, at urlString: String) -> UIAlertController {
+        let title = businessName ?? "Business Website"
+        let message = "How would you like to open the website?"
+        
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        actionSheet.addAction(cancelAction)
+        
+        guard let webURL = URL(string: urlString) else {
+            actionSheet.message = "This website cannot be opened current."
+            return actionSheet
+        }
+        
+        let safariAction = UIAlertAction(title: "Open in Safari", style: .default) { _ in
+            UIApplication.shared.open(webURL)
+        }
+        
+        let webViewAction = UIAlertAction(title: "Open in WebView", style: .default) { [weak self] _ in
+            let storyboard = UIStoryboard(storyboard: .homeDetail)
+            let detailViewController: HomeDetailViewController = storyboard.instantiateViewController()
+            
+            detailViewController.configure(with: webURL)
+            
+            self?.navigationController?.pushViewController(detailViewController, animated: true)
+        }
+        
+        actionSheet.addAction(safariAction)
+        actionSheet.addAction(webViewAction)
+        
+        return actionSheet
     }
 }

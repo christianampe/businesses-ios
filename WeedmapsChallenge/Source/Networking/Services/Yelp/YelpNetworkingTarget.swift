@@ -41,7 +41,7 @@ extension Yelp.Networking.Target {
                     "latitude": "\(lat)",
                     "longitude": "\(long)"]
         case .businessSearch(let text, let lat, let long):
-            return ["text": text,
+            return ["term": text,
                     "latitude": "\(lat)",
                     "longitude": "\(long)"]
         }

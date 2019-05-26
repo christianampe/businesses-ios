@@ -12,6 +12,7 @@ import UIKit
 extension UIStoryboard {
     enum Storyboard: String {
         case home = "Home"
+        case homeDetail = "HomeDetail"
         case homeSearchResults = "HomeSearchResults"
         case favorites = "Favorites"
     }

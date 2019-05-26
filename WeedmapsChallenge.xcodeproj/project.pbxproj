@@ -30,6 +30,9 @@
 		BF1FEE9A229A29EA003A7F67 /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE99229A29EA003A7F67 /* NetworkingRequestValidation.swift */; };
 		BF1FEE9C229A2D6E003A7F67 /* NetworkingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE9B229A2D6E003A7F67 /* NetworkingProviderError.swift */; };
 		BF1FEE9F229AF480003A7F67 /* YelpNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE9E229AF480003A7F67 /* YelpNetworkingError.swift */; };
+		BF648436229B177D0089590D /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF648435229B177D0089590D /* HomeDetail.storyboard */; };
+		BF648438229B250C0089590D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF648437229B250C0089590D /* WebKit.framework */; };
+		BF64843A229B33B80089590D /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF648439229B33B80089590D /* CALayer++.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
@@ -103,6 +106,9 @@
 		BF1FEE99229A29EA003A7F67 /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
 		BF1FEE9B229A2D6E003A7F67 /* NetworkingProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProviderError.swift; sourceTree = "<group>"; };
 		BF1FEE9E229AF480003A7F67 /* YelpNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpNetworkingError.swift; sourceTree = "<group>"; };
+		BF648435229B177D0089590D /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
+		BF648437229B250C0089590D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BF648439229B33B80089590D /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF648438229B250C0089590D /* WebKit.framework in Frameworks */,
 				BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */,
 				BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */,
 			);
@@ -286,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1FEE7722999EF4003A7F67 /* UIStoryboard+Identifiers.swift */,
+				BF648439229B33B80089590D /* CALayer++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 		BFC93E03229793B20077598A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF648437229B250C0089590D /* WebKit.framework */,
 				BFC93E05229793B20077598A /* Alamofire.framework */,
 				BFC93E04229793B20077598A /* Kingfisher.framework */,
 			);
@@ -383,6 +392,7 @@
 		BFC93E282297AB260077598A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				BF648435229B177D0089590D /* HomeDetail.storyboard */,
 				5ABB14BB2167CF2400A2CB2C /* HomeDetailViewController.swift */,
 				BFC93E2B2297ABEC0077598A /* HomeDetailViewModelProtocol.swift */,
 			);
@@ -522,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF648436229B177D0089590D /* HomeDetail.storyboard in Resources */,
 				BFC93E1122979B3A0077598A /* HomeSearchResults.storyboard in Resources */,
 				5ABB14892167C42600A2CB2C /* LaunchScreen.storyboard in Resources */,
 				5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */,
@@ -621,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1FEE9A229A29EA003A7F67 /* NetworkingRequestValidation.swift in Sources */,
+				BF64843A229B33B80089590D /* CALayer++.swift in Sources */,
 				BF1FEE7422999E65003A7F67 /* SegueIdentifiable.swift in Sources */,
 				BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */,
 				BFC93E302297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift in Sources */,

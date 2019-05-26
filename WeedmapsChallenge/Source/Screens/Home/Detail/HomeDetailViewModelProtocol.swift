@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeDetailViewModelProtocol {
-    
+    var webURLString: String { get }
 }

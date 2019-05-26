@@ -48,6 +48,12 @@ extension HomeSearchResultsViewController: UITableViewDataSource {
         
         return tableView.dequeueReusableCell(for: indexPath) as HomeSearchResultsCell
     }
+    
+    func tableView(_ tableView: UITableView,
+                   titleForHeaderInSection section: Int) -> String? {
+        
+        return "Results"
+    }
 }
 
 // MARK: - UITableViewDelegate
