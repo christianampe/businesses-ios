@@ -12,7 +12,7 @@ protocol NetworkingServiceProtocol {
     associatedtype R: NetworkingServiceResponseProtocol
     associatedtype E: Swift.Error
     
-    func request(_ request: URLRequest, completion: @escaping (Result<R, E>) -> Void)
+    func request(_ request: URLRequest, completion: @escaping (Result<R, E>) -> Void) -> URLSessionDataTask
 }
 
 class NetworkingService {
@@ -28,11 +28,12 @@ extension NetworkingService: NetworkingServiceProtocol {
     /// - Parameters:
     ///   - request: A request object containing all information necessary for making a network request.
     ///   - completion: Returns a generic result containing either an error or successful response.
+    @discardableResult
     func request(_ request: URLRequest,
-                 completion: @escaping (Result<Response, Error>) -> Void) {
+                 completion: @escaping (Result<Response, Error>) -> Void) -> URLSessionDataTask {
         
         // make network request utilizing Apple's API
-        session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             
             // ensure the response exists and is an HTTPURLResponse
             guard let response = response as? HTTPURLResponse else {
@@ -55,8 +56,11 @@ extension NetworkingService: NetworkingServiceProtocol {
                                              request: request,
                                              response: response)))
             }
-            
+        }
+        
         // resume execution
-        }.resume()
+        task.resume()
+        
+        return task
     }
 }

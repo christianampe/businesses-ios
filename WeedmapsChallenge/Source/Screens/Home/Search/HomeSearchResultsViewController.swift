@@ -37,10 +37,22 @@ extension HomeSearchResultsViewController {
 
 // MARK: - UITableViewDataSource
 extension HomeSearchResultsViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel?.autocompleteSearches.count ?? 0
+        switch section {
+        case 0:
+            return viewModel?.recentSearches.count ?? 0
+        case 1:
+            return viewModel?.autocompleteSearches.count ?? 0
+        default:
+            assertionFailure("unexpected number of sections")
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView,
@@ -52,7 +64,15 @@ extension HomeSearchResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    titleForHeaderInSection section: Int) -> String? {
         
-        return "Results"
+        switch section {
+        case 0:
+            return "Recent Searches"
+        case 1:
+            return "Yelp Autocomplete"
+        default:
+            assertionFailure("unexpected number of sections")
+            return "Error"
+        }
     }
 }
 
@@ -67,11 +87,22 @@ extension HomeSearchResultsViewController: UITableViewDelegate {
             return
         }
         
-        guard let viewModel = viewModel?.autocompleteSearches[indexPath.row] else {
-            return
+        switch indexPath.section {
+        case 0:
+            guard let viewModel = viewModel?.recentSearches[indexPath.row] else {
+                return
+            }
+            
+            cell.configure(with: viewModel)
+        case 1:
+            guard let viewModel = viewModel?.autocompleteSearches[indexPath.row] else {
+                return
+            }
+            
+            cell.configure(with: viewModel)
+        default:
+            assertionFailure("unexpected number of sections")
         }
-        
-        cell.configure(with: viewModel)
     }
     
     func tableView(_ tableView: UITableView,

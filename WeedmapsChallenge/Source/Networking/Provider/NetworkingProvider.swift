@@ -12,7 +12,7 @@ protocol NetworkingProviderProtocol {
     associatedtype R: NetworkingServiceResponseProtocol
     associatedtype E: Swift.Error
     
-    func request(_ target: T, completion: @escaping (Result<R, E>) -> Void)
+    func request(_ target: T, completion: @escaping (Result<R, E>) -> Void) -> URLSessionDataTask
 }
 
 // MARK: - Networking Class
@@ -31,11 +31,12 @@ extension NetworkingProvider: NetworkingProviderProtocol {
     /// - Parameters:
     ///     - target: Enum holding possible network requests.
     ///     - completion: Result returning either a parsed model or an error.
+    @discardableResult
     func request(_ target: T,
-                 completion: @escaping (Result<NetworkingService.Response, Error>) -> Void) {
+                 completion: @escaping (Result<NetworkingService.Response, Error>) -> Void) -> URLSessionDataTask {
         
         // make request to specified target
-        service.request(target.urlRequest) { result in
+        return service.request(target.urlRequest) { result in
             
             // switch on result of network request
             switch result {

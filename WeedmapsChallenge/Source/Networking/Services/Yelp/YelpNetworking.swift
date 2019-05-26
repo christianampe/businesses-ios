@@ -28,8 +28,7 @@ extension Yelp {
             return jsonDecoder
         }()
         
-        
-        
+        private var autocompleteRequest: URLSessionDataTask?
     }
 }
 
@@ -37,7 +36,8 @@ extension Yelp.Networking {
     func autocomplete(for text: String,
                       _ completion: @escaping (Result<Yelp.Networking.Responses.Autocomplete, Error>) -> Void) {
         
-        provider.request(.autocomplete(text: text, latitude: 33.646942, longitude: -117.686104)) { [weak self] result in
+        autocompleteRequest?.cancel()
+        autocompleteRequest = provider.request(.autocomplete(text: text, latitude: 33.646942, longitude: -117.686104)) { [weak self] result in
             guard let self = self else { return }
             
             switch result {

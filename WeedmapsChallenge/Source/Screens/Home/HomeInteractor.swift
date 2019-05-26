@@ -12,13 +12,14 @@ protocol HomeInteractorProtocol: class {
     var view: HomeViewControllerProtocol? { get set }
     
     func fetchAutocomplete(for text: String)
-    func fetchBusinesses(for text: String)
+    func fetchBusinesses(for text: String?)
 }
 
 class HomeInteractor: HomeInteractorProtocol {
     private lazy var yelpProvider = Yelp.Networking()
     private var recentSearches: [String] = []
     private var searchOffset: Int = 0
+    private var currentBusinessSearch: String?
     
     weak var view: HomeViewControllerProtocol?
 }
@@ -45,8 +46,22 @@ extension HomeInteractor {
         }
     }
     
-    func fetchBusinesses(for text: String) {
-        yelpProvider.businessesSearch(for: text, with: searchOffset) { [weak self] result in
+    func fetchBusinesses(for text: String?) {
+        var searchTerm: String
+        
+        if let text = text {
+            searchTerm = text
+            currentBusinessSearch = text
+            recentSearches.append(text)
+        } else if let previousSearchTerm = currentBusinessSearch {
+            searchTerm = previousSearchTerm
+            searchOffset += 20
+        } else {
+            assertionFailure("edge case - should never reach this point")
+            searchTerm = ""
+        }
+        
+        yelpProvider.businessesSearch(for: searchTerm, with: searchOffset) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):

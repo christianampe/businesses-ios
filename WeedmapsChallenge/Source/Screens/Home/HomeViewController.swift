@@ -134,7 +134,7 @@ extension HomeViewController: UIScrollViewDelegate {
             return
         }
         
-        // todo: fetch more items
+        interactor?.fetchBusinesses(for: nil)
     }
 }
 
@@ -169,6 +169,7 @@ extension HomeViewController: HomeSearchResultsViewControllerDelegate {
     }
 }
 
+// MARK: - Action Sheet
 private extension HomeViewController {
     func actionSheet(for businessName: String?, at urlString: String) -> UIAlertController {
         let title = businessName ?? "Business Website"
