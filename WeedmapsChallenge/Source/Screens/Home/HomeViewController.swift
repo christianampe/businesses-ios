@@ -7,7 +7,8 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
     
-    private var searchController: HomeSearchViewController?
+    private var searchController: UISearchController?
+    private var searchResultsViewController: HomeSearchResultsViewController?
     
     private var viewModel: HomeViewModelProtocol?
 }
@@ -23,6 +24,18 @@ extension HomeViewController {
 // MARK: - Setup Methods
 private extension HomeViewController {
     func configure() {
+        let searchResultsViewController: HomeSearchResultsViewController = UIStoryboard(storyboard: .homeSearchResults).instantiateViewController()
+        let searchController = UISearchController(searchResultsController: searchResultsViewController)
+        
+        searchResultsViewController.delegate = self
+        searchController.searchBar.delegate = self
+        
+        self.searchResultsViewController = searchResultsViewController
+        self.searchController = searchController
+        
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
         collectionView.registerCollectionViewCell(xibCell: BusinessCell.self)
     }
 }
@@ -81,11 +94,25 @@ extension HomeViewController: UIScrollViewDelegate {
     }
 }
 
-// MARK: - HomeSearchViewControllerDelegate
-extension HomeViewController: HomeSearchViewControllerDelegate {
-    func homeSearchViewController(_ homeSearchViewController: HomeSearchViewController,
-                                  didSelectSearchResult searchResult: String) {
+// MARK: - UISearchResultsUpdating
+extension HomeViewController: UISearchControllerDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        // todo: fire off network request for a list of suggested searches
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        // todo: fire off network request to get businesses
+    }
+}
+
+// MARK: - HomeSearchViewControllerDelegate
+extension HomeViewController: HomeSearchResultsViewControllerDelegate {
+    func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
+                                         didSelectSearchResult searchResult: String) {
+        
+        // todo: fire off network request
     }
 }

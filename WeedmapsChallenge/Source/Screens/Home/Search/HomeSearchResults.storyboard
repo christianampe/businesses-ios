@@ -12,8 +12,7 @@
         <!--Home Search Results View Controller-->
         <scene sceneID="DRF-6t-F6X">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewi-4p-Du6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="CYU-Lm-bas" customClass="HomeSearchResultsViewController" customModule="WeedmapsChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeSearchResultsViewController" id="CYU-Lm-bas" customClass="HomeSearchResultsViewController" customModule="WeedmapsChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fG6-5k-fMl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +58,7 @@
                         <outlet property="tableView" destination="rcd-Kh-hzy" id="Dly-uf-Dxc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewi-4p-Du6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="136.60714285714286"/>
         </scene>

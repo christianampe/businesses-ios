@@ -20,7 +20,6 @@
 		5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */; };
 		5ABB14C22167D50300A2CB2C /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C12167D50300A2CB2C /* Favorites.storyboard */; };
 		5ABB14C42167D51000A2CB2C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14C32167D51000A2CB2C /* Home.storyboard */; };
-		BF1FEE6E22999319003A7F67 /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */; };
 		BF1FEE7422999E65003A7F67 /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE7222999E65003A7F67 /* SegueIdentifiable.swift */; };
 		BF1FEE7522999E65003A7F67 /* SegueIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE7322999E65003A7F67 /* SegueIdentifiable+UIViewController.swift */; };
 		BF1FEE7822999EF4003A7F67 /* UIStoryboard+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FEE7722999EF4003A7F67 /* UIStoryboard+Identifiers.swift */; };
@@ -88,7 +87,6 @@
 		5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 		5ABB14C12167D50300A2CB2C /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		5ABB14C32167D51000A2CB2C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
 		BF1FEE7222999E65003A7F67 /* SegueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
 		BF1FEE7322999E65003A7F67 /* SegueIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
 		BF1FEE7722999EF4003A7F67 /* UIStoryboard+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifiers.swift"; sourceTree = "<group>"; };
@@ -255,8 +253,10 @@
 		BF1FEE6C229992F3003A7F67 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				BF1FEE6D22999319003A7F67 /* HomeSearchViewController.swift */,
-				BFC93E0F22979B280077598A /* Search Results */,
+				BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */,
+				BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */,
+				BFC93E2F2297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift */,
+				BFC93E312297B2B20077598A /* HomeSearchResultsCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -306,17 +306,6 @@
 				5ABB14AD2167C5E600A2CB2C /* Favorites */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		BFC93E0F22979B280077598A /* Search Results */ = {
-			isa = PBXGroup;
-			children = (
-				BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */,
-				BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */,
-				BFC93E2F2297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift */,
-				BFC93E312297B2B20077598A /* HomeSearchResultsCell.swift */,
-			);
-			path = "Search Results";
 			sourceTree = "<group>";
 		};
 		BFC93E122297A0780077598A /* Networking */ = {
@@ -597,7 +586,6 @@
 				BFC93E432297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
 				BFC93E1A2297A5040077598A /* NetworkingRequest.swift in Sources */,
 				BFC93E1C2297A53A0077598A /* NetworkingRequestHTTPMethod.swift in Sources */,
-				BF1FEE6E22999319003A7F67 /* HomeSearchViewController.swift in Sources */,
 				5ABB14812167C42300A2CB2C /* FavoritesViewController.swift in Sources */,
 				BFC93E202297A65B0077598A /* YelpNetworkingTarget.swift in Sources */,
 				BFC93E252297A8450077598A /* Yelp.swift in Sources */,
