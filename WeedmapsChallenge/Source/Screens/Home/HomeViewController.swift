@@ -9,7 +9,7 @@ class HomeViewController: UIViewController {
     
     private var searchController: UISearchController?
     private var searchResultsViewController: HomeSearchResultsViewController?
-    
+   
     private var viewModel: HomeViewModelProtocol?
 }
 
