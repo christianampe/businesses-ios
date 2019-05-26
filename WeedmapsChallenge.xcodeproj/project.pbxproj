@@ -33,6 +33,7 @@
 		BF648436229B177D0089590D /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF648435229B177D0089590D /* HomeDetail.storyboard */; };
 		BF648438229B250C0089590D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF648437229B250C0089590D /* WebKit.framework */; };
 		BF64843A229B33B80089590D /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF648439229B33B80089590D /* CALayer++.swift */; };
+		BF64843C229B3EB80089590D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843B229B3EB80089590D /* HomeInteractor.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
@@ -109,6 +110,7 @@
 		BF648435229B177D0089590D /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
 		BF648437229B250C0089590D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BF648439229B33B80089590D /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
+		BF64843B229B3EB80089590D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				5ABB14C32167D51000A2CB2C /* Home.storyboard */,
 				5ABB147E2167C42300A2CB2C /* HomeViewController.swift */,
+				BF64843B229B3EB80089590D /* HomeInteractor.swift */,
 				BF1FEE81229A1BA2003A7F67 /* HomeViewModelProtocol.swift */,
 				BF1FEE6C229992F3003A7F67 /* Search */,
 				BFC93E282297AB260077598A /* Detail */,
@@ -632,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1FEE9A229A29EA003A7F67 /* NetworkingRequestValidation.swift in Sources */,
+				BF64843C229B3EB80089590D /* HomeInteractor.swift in Sources */,
 				BF64843A229B33B80089590D /* CALayer++.swift in Sources */,
 				BF1FEE7422999E65003A7F67 /* SegueIdentifiable.swift in Sources */,
 				BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */,

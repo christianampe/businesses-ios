@@ -15,6 +15,7 @@ protocol YelpNetworkingProtocol: class {
                       _ completion: @escaping (Result<Yelp.Networking.Responses.Autocomplete, E>) -> Void)
     
     func businessesSearch(for text: String,
+                          with offset: Int,
                           _ completion: @escaping (Result<Yelp.Networking.Responses.BusinessesSearch, E>) -> Void)
 }
 
@@ -26,6 +27,9 @@ extension Yelp {
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             return jsonDecoder
         }()
+        
+        
+        
     }
 }
 
@@ -57,9 +61,10 @@ extension Yelp.Networking {
     }
     
     func businessesSearch(for text: String,
+                          with offset: Int,
                           _ completion: @escaping (Result<Yelp.Networking.Responses.BusinessesSearch, Error>) -> Void) {
         
-        provider.request(.businessSearch(text: text, latitude: 33.646942, longitude: -117.686104)) { [weak self] result in
+        provider.request(.businessSearch(text: text, latitude: 33.646942, longitude: -117.686104, offset: offset)) { [weak self] result in
             guard let self = self else { return }
             
             switch result {

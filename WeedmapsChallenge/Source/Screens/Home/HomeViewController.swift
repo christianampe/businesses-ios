@@ -4,15 +4,36 @@
 
 import UIKit
 
+protocol HomeViewControllerProtocol: class {
+    var interactor: HomeInteractorProtocol? { get set }
+    
+    func displayAutocomplete(_ results: HomeSearchResultsViewModelProtocol)
+    func displayBusinesses(_ businesses: HomeViewModelProtocol)
+}
+
 class HomeViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
     
     private var searchController: UISearchController?
     private var searchResultsViewController: HomeSearchResultsViewController?
     
-    private lazy var yelpProvider = Yelp.Networking()
-   
-    private var viewModel: HomeViewModelProtocol?
+    private var businessesViewModel: HomeViewModelProtocol?
+    
+    var interactor: HomeInteractorProtocol?
+}
+
+// MARK: - HomeViewControllerProtocol
+extension HomeViewController: HomeViewControllerProtocol {
+    func displayAutocomplete(_ results: HomeSearchResultsViewModelProtocol) {
+        searchController?.isActive = true
+        searchResultsViewController?.set(properties: results)
+    }
+    
+    func displayBusinesses(_ businesses: HomeViewModelProtocol) {
+        searchController?.isActive = false
+        businessesViewModel = businesses
+        collectionView.reloadData()
+    }
 }
 
 // MARK: - Lifecycle
@@ -29,13 +50,17 @@ private extension HomeViewController {
         let searchResultsViewController: HomeSearchResultsViewController = UIStoryboard(storyboard: .homeSearchResults).instantiateViewController()
         let searchController = UISearchController(searchResultsController: searchResultsViewController)
         let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        let interactor = HomeInteractor()
         
         searchResultsViewController.delegate = self
         searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
         
+        interactor.view = self
+        
         self.searchResultsViewController = searchResultsViewController
         self.searchController = searchController
+        self.interactor = interactor
         
         navigationItem.searchController = searchController
         definesPresentationContext = true
@@ -52,7 +77,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        return viewModel?.businesses.count ?? 0
+        return businessesViewModel?.businesses.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -73,7 +98,7 @@ extension HomeViewController: UICollectionViewDelegate {
             return
         }
         
-        guard let viewModel = viewModel?.businesses[indexPath.row] else {
+        guard let viewModel = businessesViewModel?.businesses[indexPath.row] else {
             return
         }
         
@@ -83,7 +108,7 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        guard let business = viewModel?.businesses[indexPath.row], let websiteURLString = business.websiteURLString else {
+        guard let business = businessesViewModel?.businesses[indexPath.row], let websiteURLString = business.websiteURLString else {
             return
         }
         
@@ -120,31 +145,18 @@ extension HomeViewController: UISearchResultsUpdating {
             return
         }
         
-        yelpProvider.autocomplete(for: searchText) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let response):
-                    guard let titles = (response.categories?.compactMap { $0.title }) else {
-                        return
-                    }
-                    
-                    let viewModel = HomeSearchResultsViewModel(recentSearches: [],
-                                                               autocompleteSearches: titles)
-                    
-                    self?.searchResultsViewController?.set(properties:  viewModel)
-                    
-                case .failure(let error):
-                    break
-                }
-            }
-        }
+        interactor?.fetchAutocomplete(for: searchText)
     }
 }
 
 // MARK: - UISearchBarDelegate
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, !searchText.isEmpty else {
+            return
+        }
         
+        interactor?.fetchAutocomplete(for: searchText)
     }
 }
 
@@ -153,30 +165,7 @@ extension HomeViewController: HomeSearchResultsViewControllerDelegate {
     func homeSearchResultsViewController(_ homeSearchResultsViewController: HomeSearchResultsViewController,
                                          didSelectSearchResult searchResult: String) {
         
-        yelpProvider.businessesSearch(for: searchResult) { [weak self] result in
-            DispatchQueue.main.async {
-                self?.searchController?.isActive = false
-                
-                switch result {
-                case .success(let response):
-                    let viewModels = response.businesses?.map { (business) -> HomeBusinessViewModel in
-                        let description = "\(business.name ?? "no name")\n\(business.displayPhone ?? "no phone number provided")"
-                        return HomeBusinessViewModel(name: business.name,
-                                                     detail: description,
-                                                     imageURLString: business.imageUrl,
-                                                     websiteURLString: business.url)
-                    }
-                    
-                    let viewModel = HomeViewModel(businesses: viewModels ?? [])
-                    
-                    self?.viewModel = viewModel
-                    self?.collectionView.reloadData()
-                    
-                case .failure(let error):
-                    break
-                }
-            }
-        }
+        interactor?.fetchBusinesses(for: searchResult)
     }
 }
 
