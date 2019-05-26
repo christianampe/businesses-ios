@@ -25,12 +25,18 @@ class HomeViewController: UIViewController {
 // MARK: - HomeViewControllerProtocol
 extension HomeViewController: HomeViewControllerProtocol {
     func displayAutocomplete(_ results: HomeSearchResultsViewModelProtocol) {
-        searchController?.isActive = true
+        if let isActive = searchController?.isActive, !isActive {
+            searchController?.isActive = true
+        }
+
         searchResultsViewController?.set(properties: results)
     }
     
     func displayBusinesses(_ businesses: HomeViewModelProtocol) {
-        searchController?.isActive = false
+        if let isActive = searchController?.isActive, isActive {
+            searchController?.isActive = false
+        }
+        
         businessesViewModel = businesses
         collectionView.reloadData()
     }
@@ -69,6 +75,8 @@ private extension HomeViewController {
         
         flowLayout?.itemSize = UICollectionViewFlowLayout.automaticSize
         flowLayout?.estimatedItemSize = CGSize(width: (collectionView.frame.width / 2) - 20, height: 100)
+        
+        LocationManager.requestAccess()
     }
 }
 

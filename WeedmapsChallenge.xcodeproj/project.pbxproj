@@ -34,6 +34,7 @@
 		BF648438229B250C0089590D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF648437229B250C0089590D /* WebKit.framework */; };
 		BF64843A229B33B80089590D /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF648439229B33B80089590D /* CALayer++.swift */; };
 		BF64843C229B3EB80089590D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843B229B3EB80089590D /* HomeInteractor.swift */; };
+		BF64843F229B59460089590D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843E229B59460089590D /* LocationManager.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
@@ -111,6 +112,7 @@
 		BF648437229B250C0089590D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BF648439229B33B80089590D /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
 		BF64843B229B3EB80089590D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		BF64843E229B59460089590D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +332,14 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		BF64843D229B59370089590D /* Location Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BF64843E229B59460089590D /* LocationManager.swift */,
+			);
+			path = "Location Manager";
+			sourceTree = "<group>";
+		};
 		BFC93E03229793B20077598A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +385,7 @@
 		BFC93E1D2297A5D50077598A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BF64843D229B59370089590D /* Location Manager */,
 				BFC93E1E2297A5DA0077598A /* Yelp */,
 			);
 			path = Services;
@@ -672,6 +683,7 @@
 				BFC93E412297B39E0077598A /* StoryboardIdentifiable+Self.swift in Sources */,
 				BF1FEE7522999E65003A7F67 /* SegueIdentifiable+UIViewController.swift in Sources */,
 				BFC93E182297A1920077598A /* YelpNetworkingResponses.swift in Sources */,
+				BF64843F229B59460089590D /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
