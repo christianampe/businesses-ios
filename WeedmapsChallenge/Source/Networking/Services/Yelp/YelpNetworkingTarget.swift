@@ -60,4 +60,13 @@ extension Yelp.Networking.Target {
             return ["Authorization": "Bearer aQoSlJ_RG2cdaAjYOv4vWEMaJyS4kGWKcHaMbsCRLYWNvg-0Ms56bQj7QCO-aQoydqhI1dUQLGaddtln8VzGAiUTQldRTGE_qtA4qSHTkjuO7dGZ27RL4K6X5mjnXHYx"]
         }
     }
+    
+    var validation: NetworkingRequestValidation {
+        switch self {
+        case .autocomplete:
+            return .none
+        case .businessSearch:
+            return .none
+        }
+    }
 }

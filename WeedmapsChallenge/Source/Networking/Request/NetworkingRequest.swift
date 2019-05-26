@@ -14,17 +14,20 @@ protocol NetworkingRequest {
     /// The target's base url.
     var baseURL: URL { get }
     
+    /// The http method used in the request.
+    var method: NetworkingRequestHTTPMethod { get }
+    
     /// The path to be appended to base url to form the full url.
     var path: String { get }
     
     /// The parameters to be appended to the full formed url.
     var parameters: [String: String]? { get }
     
-    /// The http method used in the request.
-    var method: NetworkingRequestHTTPMethod { get }
-    
     /// The headers to be used in the request.
     var headers: [String: String]? { get }
+    
+    // The validation codes of the response.
+    var validation: NetworkingRequestValidation { get }
 }
 
 // MARK: - Public Constructor
