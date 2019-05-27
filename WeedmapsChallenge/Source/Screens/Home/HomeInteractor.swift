@@ -73,9 +73,11 @@ extension HomeInteractor {
                                                      websiteURLString: business.url)
                     }
                     
-                    let viewModel = HomeViewModel(businesses: viewModels ?? [])
+                    guard let businesses = viewModels else {
+                        return
+                    }
                     
-                    self?.view?.displayBusinesses(viewModel)
+                    self?.view?.displayBusinesses(businesses)
                     
                 case .failure:
                     break

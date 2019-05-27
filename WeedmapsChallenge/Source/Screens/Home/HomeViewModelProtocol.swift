@@ -7,11 +7,11 @@
 //
 
 protocol HomeViewModelProtocol {
-    var businesses: [HomeBusinessViewModelProtocol] { get }
+    var businesses: [HomeBusinessViewModelProtocol] { get set }
 }
 
 struct HomeViewModel: HomeViewModelProtocol {
-    let businesses: [HomeBusinessViewModelProtocol]
+    var businesses: [HomeBusinessViewModelProtocol]
 }
 
 protocol HomeBusinessViewModelProtocol: BusinessCellViewModelProtocol {

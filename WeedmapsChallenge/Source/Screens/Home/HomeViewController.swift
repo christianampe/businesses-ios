@@ -8,7 +8,7 @@ protocol HomeViewControllerProtocol: class {
     var interactor: HomeInteractorProtocol? { get set }
     
     func displayAutocomplete(_ results: HomeSearchResultsViewModelProtocol)
-    func displayBusinesses(_ businesses: HomeViewModelProtocol)
+    func displayBusinesses(_ businesses: [HomeBusinessViewModelProtocol])
 }
 
 class HomeViewController: UIViewController {
@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     private var searchController: UISearchController?
     private var searchResultsViewController: HomeSearchResultsViewController?
     
-    private var businessesViewModel: HomeViewModelProtocol?
+    private var businesses: [HomeBusinessViewModelProtocol] = []
     
     var interactor: HomeInteractorProtocol?
 }
@@ -32,12 +32,12 @@ extension HomeViewController: HomeViewControllerProtocol {
         searchResultsViewController?.set(properties: results)
     }
     
-    func displayBusinesses(_ businesses: HomeViewModelProtocol) {
+    func displayBusinesses(_ businesses: [HomeBusinessViewModelProtocol]) {
         if let isActive = searchController?.isActive, isActive {
             searchController?.isActive = false
         }
         
-        businessesViewModel = businesses
+        self.businesses.append(contentsOf: businesses)
         collectionView.reloadData()
     }
 }
@@ -85,7 +85,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        return businessesViewModel?.businesses.count ?? 0
+        return businesses.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -106,17 +106,19 @@ extension HomeViewController: UICollectionViewDelegate {
             return
         }
         
-        guard let viewModel = businessesViewModel?.businesses[indexPath.row] else {
-            return
-        }
+        cell.configure(with: businesses[indexPath.row])
         
-        cell.configure(with: viewModel)
+        if indexPath.row >= businesses.count - 1 {
+            interactor?.fetchBusinesses(for: nil)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        guard let business = businessesViewModel?.businesses[indexPath.row], let websiteURLString = business.websiteURLString else {
+        let business = businesses[indexPath.row]
+        
+        guard let websiteURLString = business.websiteURLString else {
             return
         }
         
@@ -132,24 +134,10 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
-extension HomeViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard scrollView.contentOffset.y >= 0 else {
-            return
-        }
-        
-        guard scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) else {
-            return
-        }
-        
-        interactor?.fetchBusinesses(for: nil)
-    }
-}
-
 // MARK: - UISearchResultsUpdating
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else {
+        guard let searchText = searchController.searchBar.text, !searchText.isEmpty else {
             return
         }
         
