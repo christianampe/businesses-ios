@@ -8,7 +8,7 @@ protocol HomeViewControllerProtocol: class {
     var interactor: HomeInteractorProtocol? { get set }
     
     func displayAutocomplete(_ results: HomeSearchResultsViewModelProtocol)
-    func displayBusinesses(_ businesses: [HomeBusinessViewModelProtocol])
+    func displayBusinesses(_ businesses: [HomeBusinessViewModelProtocol], shouldPurge: Bool)
 }
 
 class HomeViewController: UIViewController {
@@ -32,7 +32,13 @@ extension HomeViewController: HomeViewControllerProtocol {
         searchResultsViewController?.set(properties: results)
     }
     
-    func displayBusinesses(_ businesses: [HomeBusinessViewModelProtocol]) {
+    func displayBusinesses(_ businesses: [HomeBusinessViewModelProtocol],
+                           shouldPurge: Bool) {
+        
+        if shouldPurge {
+            self.businesses = []
+        }
+        
         if let isActive = searchController?.isActive, isActive {
             searchController?.isActive = false
         }

@@ -108,11 +108,24 @@ extension HomeSearchResultsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         
-        guard let searchResult = viewModel?.autocompleteSearches[indexPath.row] else {
-            return
+        switch indexPath.section {
+        case 0:
+            guard let searchResult = viewModel?.recentSearches[indexPath.row] else {
+                return
+            }
+            
+            delegate?.homeSearchResultsViewController(self,
+                                                      didSelectSearchResult: searchResult)
+        case 1:
+            guard let searchResult = viewModel?.autocompleteSearches[indexPath.row] else {
+                return
+            }
+            
+            delegate?.homeSearchResultsViewController(self,
+                                                      didSelectSearchResult: searchResult)
+        default:
+            assertionFailure("unexpected number of sections")
+            break
         }
-        
-        delegate?.homeSearchResultsViewController(self,
-                                                  didSelectSearchResult: searchResult)
     }
 }

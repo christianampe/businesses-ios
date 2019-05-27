@@ -48,17 +48,24 @@ extension HomeInteractor {
     
     func fetchBusinesses(for text: String?) {
         var searchTerm: String
+        var shouldPurge: Bool
         
         if let text = text {
             searchTerm = text
             currentBusinessSearch = text
-            recentSearches.append(text)
+            shouldPurge = true
+            
+            if !recentSearches.contains(text) {
+                recentSearches.append(text)
+            }
         } else if let previousSearchTerm = currentBusinessSearch {
             searchTerm = previousSearchTerm
             searchOffset += 20
+            shouldPurge = false
         } else {
             assertionFailure("edge case - should never reach this point")
             searchTerm = ""
+            shouldPurge = false
         }
         
         yelpProvider.businessesSearch(for: searchTerm, with: searchOffset) { [weak self] result in
@@ -77,7 +84,7 @@ extension HomeInteractor {
                         return
                     }
                     
-                    self?.view?.displayBusinesses(businesses)
+                    self?.view?.displayBusinesses(businesses, shouldPurge: shouldPurge)
                     
                 case .failure:
                     break
