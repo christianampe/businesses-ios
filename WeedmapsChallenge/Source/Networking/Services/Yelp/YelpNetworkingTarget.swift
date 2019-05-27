@@ -44,6 +44,7 @@ extension Yelp.Networking.Target {
             return ["term": text,
                     "latitude": "\(lat)",
                     "longitude": "\(long)",
+                    "limit": "\(15)",
                     "offset": "\(offset)"]
         }
     }

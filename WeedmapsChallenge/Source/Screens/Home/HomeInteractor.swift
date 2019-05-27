@@ -17,6 +17,7 @@ protocol HomeInteractorProtocol: class {
 
 class HomeInteractor: HomeInteractorProtocol {
     private lazy var yelpProvider = Yelp.Networking()
+    
     private var recentSearches: [String] = []
     private var searchOffset: Int = 0
     private var currentBusinessSearch: String?
@@ -60,7 +61,7 @@ extension HomeInteractor {
             }
         } else if let previousSearchTerm = currentBusinessSearch {
             searchTerm = previousSearchTerm
-            searchOffset += 20
+            searchOffset += 15
             shouldPurge = false
         } else {
             assertionFailure("edge case - should never reach this point")

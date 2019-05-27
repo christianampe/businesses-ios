@@ -9,18 +9,39 @@
 import Foundation
 import CoreLocation
 
-class LocationManager {
-    private static var locationManager: CLLocationManager = {
-        let locationManager = CLLocationManager()
-        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-        return locationManager
-    }()
+class LocationManager: NSObject {
+    private let locationManager: CLLocationManager
+
+    private override init() {
+        locationManager = CLLocationManager()
+        super.init()
+    }
     
-    static var location: CLLocation? {
+    static let shared: LocationManager = {
+        return LocationManager()
+    }()
+}
+
+extension LocationManager {
+    var location: CLLocation? {
         return locationManager.location
     }
     
-    static func requestAccess() {
-        locationManager.requestWhenInUseAuthorization()
+    func setup() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestLocation()
+    }
+}
+
+extension LocationManager: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error) {
+        
     }
 }

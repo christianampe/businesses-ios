@@ -82,7 +82,7 @@ private extension HomeViewController {
         flowLayout?.itemSize = UICollectionViewFlowLayout.automaticSize
         flowLayout?.estimatedItemSize = CGSize(width: (collectionView.frame.width / 2) - 20, height: 100)
         
-        LocationManager.requestAccess()
+        LocationManager.shared.setup()
     }
 }
 

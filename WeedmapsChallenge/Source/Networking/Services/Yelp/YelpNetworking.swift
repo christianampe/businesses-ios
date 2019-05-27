@@ -29,7 +29,6 @@ extension Yelp {
         }()
         
         private var autocompleteRequest: URLSessionDataTask?
-        private let userLocation = LocationManager.location
     }
 }
 
@@ -39,8 +38,9 @@ extension Yelp.Networking {
         
         autocompleteRequest?.cancel()
         autocompleteRequest = provider.request(.autocomplete(text: text,
-                                                             latitude: userLocation?.coordinate.latitude ?? 33.646942,
-                                                             longitude: userLocation?.coordinate.longitude ?? -117.686104)) { [weak self] result in
+                                                             latitude: LocationManager.shared.location?.coordinate.latitude ?? 33.646942,
+                                                             longitude: LocationManager.shared.location?.coordinate.longitude ?? -117.686104)) { [weak self] result in
+                                                                
             guard let self = self else { return }
             
             switch result {
@@ -67,7 +67,11 @@ extension Yelp.Networking {
                           with offset: Int,
                           _ completion: @escaping (Result<Yelp.Networking.Responses.BusinessesSearch, Error>) -> Void) {
         
-        provider.request(.businessSearch(text: text, latitude: 33.646942, longitude: -117.686104, offset: offset)) { [weak self] result in
+        provider.request(.businessSearch(text: text,
+                                         latitude: LocationManager.shared.location?.coordinate.latitude ?? 33.646942,
+                                         longitude: LocationManager.shared.location?.coordinate.longitude ?? -117.686104,
+                                         offset: offset)) { [weak self] result in
+                                            
             guard let self = self else { return }
             
             switch result {
