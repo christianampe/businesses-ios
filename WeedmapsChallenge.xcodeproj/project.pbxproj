@@ -34,6 +34,8 @@
 		BF64843C229B3EB80089590D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843B229B3EB80089590D /* HomeInteractor.swift */; };
 		BF64843F229B59460089590D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843E229B59460089590D /* LocationManager.swift */; };
 		BF6639D8229C55DB00226693 /* KeyNamespaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6639D7229C55DB00226693 /* KeyNamespaceable.swift */; };
+		BF6639E0229C6A7D00226693 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6639DF229C6A7D00226693 /* UITests.swift */; };
+		BF6639EE229C6A9400226693 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6639ED229C6A9400226693 /* UnitTests.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
 		BFC93E1122979B3A0077598A /* HomeSearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */; };
@@ -60,14 +62,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5ABB14902167C42700A2CB2C /* PBXContainerItemProxy */ = {
+		BF6639E2229C6A7D00226693 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ABB14712167C42300A2CB2C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5ABB14782167C42300A2CB2C;
 			remoteInfo = WeedmapsChallenge;
 		};
-		5ABB149B2167C42700A2CB2C /* PBXContainerItemProxy */ = {
+		BF6639F0229C6A9400226693 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ABB14712167C42300A2CB2C /* Project object */;
 			proxyType = 1;
@@ -85,8 +87,6 @@
 		5ABB14852167C42600A2CB2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ABB14882167C42600A2CB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ABB148A2167C42600A2CB2C /* WeedmapsChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeedmapsChallenge-Info.plist"; sourceTree = "<group>"; };
-		5ABB148F2167C42700A2CB2C /* WeedmapsChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeedmapsChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ABB149A2167C42700A2CB2C /* WeedmapsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeedmapsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ABB14BB2167CF2400A2CB2C /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		5ABB14BD2167D2D900A2CB2C /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -108,6 +108,12 @@
 		BF64843B229B3EB80089590D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BF64843E229B59460089590D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BF6639D7229C55DB00226693 /* KeyNamespaceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNamespaceable.swift; sourceTree = "<group>"; };
+		BF6639DD229C6A7D00226693 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF6639DF229C6A7D00226693 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		BF6639E1229C6A7D00226693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF6639EB229C6A9400226693 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF6639ED229C6A9400226693 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
+		BF6639EF229C6A9400226693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
 		BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSearchResults.storyboard; sourceTree = "<group>"; };
@@ -143,14 +149,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABB148C2167C42700A2CB2C /* Frameworks */ = {
+		BF6639DA229C6A7D00226693 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABB14972167C42700A2CB2C /* Frameworks */ = {
+		BF6639E8229C6A9400226693 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				5ABB147B2167C42300A2CB2C /* WeedmapsChallenge */,
+				BF6639DE229C6A7D00226693 /* UITests */,
+				BF6639EC229C6A9400226693 /* UnitTests */,
 				5ABB147A2167C42300A2CB2C /* Products */,
 				BFC93E03229793B20077598A /* Frameworks */,
 			);
@@ -173,8 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				5ABB14792167C42300A2CB2C /* WeedmapsChallenge.app */,
-				5ABB148F2167C42700A2CB2C /* WeedmapsChallengeTests.xctest */,
-				5ABB149A2167C42700A2CB2C /* WeedmapsChallengeUITests.xctest */,
+				BF6639DD229C6A7D00226693 /* UITests.xctest */,
+				BF6639EB229C6A9400226693 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,6 +329,24 @@
 			path = "User Defaults";
 			sourceTree = "<group>";
 		};
+		BF6639DE229C6A7D00226693 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF6639DF229C6A7D00226693 /* UITests.swift */,
+				BF6639E1229C6A7D00226693 /* Info.plist */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		BF6639EC229C6A9400226693 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF6639ED229C6A9400226693 /* UnitTests.swift */,
+				BF6639EF229C6A9400226693 /* Info.plist */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		BFC93E03229793B20077598A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,43 +467,41 @@
 			productReference = 5ABB14792167C42300A2CB2C /* WeedmapsChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5ABB148E2167C42700A2CB2C /* WeedmapsChallengeTests */ = {
+		BF6639DC229C6A7D00226693 /* UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5ABB14A62167C42700A2CB2C /* Build configuration list for PBXNativeTarget "WeedmapsChallengeTests" */;
+			buildConfigurationList = BF6639E4229C6A7D00226693 /* Build configuration list for PBXNativeTarget "UITests" */;
 			buildPhases = (
-				C8DA347DD1AF5B09BC1901DC /* [CP] Check Pods Manifest.lock */,
-				5ABB148B2167C42700A2CB2C /* Sources */,
-				5ABB148C2167C42700A2CB2C /* Frameworks */,
-				5ABB148D2167C42700A2CB2C /* Resources */,
+				BF6639D9229C6A7D00226693 /* Sources */,
+				BF6639DA229C6A7D00226693 /* Frameworks */,
+				BF6639DB229C6A7D00226693 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5ABB14912167C42700A2CB2C /* PBXTargetDependency */,
+				BF6639E3229C6A7D00226693 /* PBXTargetDependency */,
 			);
-			name = WeedmapsChallengeTests;
-			productName = WeedmapsChallengeTests;
-			productReference = 5ABB148F2167C42700A2CB2C /* WeedmapsChallengeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5ABB14992167C42700A2CB2C /* WeedmapsChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5ABB14A92167C42700A2CB2C /* Build configuration list for PBXNativeTarget "WeedmapsChallengeUITests" */;
-			buildPhases = (
-				1CE8FEBEC5E53728BDF64C25 /* [CP] Check Pods Manifest.lock */,
-				5ABB14962167C42700A2CB2C /* Sources */,
-				5ABB14972167C42700A2CB2C /* Frameworks */,
-				5ABB14982167C42700A2CB2C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5ABB149C2167C42700A2CB2C /* PBXTargetDependency */,
-			);
-			name = WeedmapsChallengeUITests;
-			productName = WeedmapsChallengeUITests;
-			productReference = 5ABB149A2167C42700A2CB2C /* WeedmapsChallengeUITests.xctest */;
+			name = UITests;
+			productName = UITests;
+			productReference = BF6639DD229C6A7D00226693 /* UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		BF6639EA229C6A9400226693 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF6639F2229C6A9400226693 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				BF6639E7229C6A9400226693 /* Sources */,
+				BF6639E8229C6A9400226693 /* Frameworks */,
+				BF6639E9229C6A9400226693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF6639F1229C6A9400226693 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = BF6639EB229C6A9400226693 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -485,19 +509,19 @@
 		5ABB14712167C42300A2CB2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Weedmaps, LLC";
 				TargetAttributes = {
 					5ABB14782167C42300A2CB2C = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					5ABB148E2167C42700A2CB2C = {
-						CreatedOnToolsVersion = 10.0;
+					BF6639DC229C6A7D00226693 = {
+						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 5ABB14782167C42300A2CB2C;
 					};
-					5ABB14992167C42700A2CB2C = {
-						CreatedOnToolsVersion = 10.0;
+					BF6639EA229C6A9400226693 = {
+						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 5ABB14782167C42300A2CB2C;
 					};
 				};
@@ -516,8 +540,8 @@
 			projectRoot = "";
 			targets = (
 				5ABB14782167C42300A2CB2C /* WeedmapsChallenge */,
-				5ABB148E2167C42700A2CB2C /* WeedmapsChallengeTests */,
-				5ABB14992167C42700A2CB2C /* WeedmapsChallengeUITests */,
+				BF6639DC229C6A7D00226693 /* UITests */,
+				BF6639EA229C6A9400226693 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -538,14 +562,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABB148D2167C42700A2CB2C /* Resources */ = {
+		BF6639DB229C6A7D00226693 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABB14982167C42700A2CB2C /* Resources */ = {
+		BF6639E9229C6A9400226693 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -555,28 +579,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CE8FEBEC5E53728BDF64C25 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WeedmapsChallengeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BFC93E08229793C90077598A /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,28 +597,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		C8DA347DD1AF5B09BC1901DC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WeedmapsChallengeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -668,32 +648,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABB148B2167C42700A2CB2C /* Sources */ = {
+		BF6639D9229C6A7D00226693 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6639E0229C6A7D00226693 /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABB14962167C42700A2CB2C /* Sources */ = {
+		BF6639E7229C6A9400226693 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6639EE229C6A9400226693 /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5ABB14912167C42700A2CB2C /* PBXTargetDependency */ = {
+		BF6639E3229C6A7D00226693 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ABB14782167C42300A2CB2C /* WeedmapsChallenge */;
-			targetProxy = 5ABB14902167C42700A2CB2C /* PBXContainerItemProxy */;
+			targetProxy = BF6639E2229C6A7D00226693 /* PBXContainerItemProxy */;
 		};
-		5ABB149C2167C42700A2CB2C /* PBXTargetDependency */ = {
+		BF6639F1229C6A9400226693 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ABB14782167C42300A2CB2C /* WeedmapsChallenge */;
-			targetProxy = 5ABB149B2167C42700A2CB2C /* PBXContainerItemProxy */;
+			targetProxy = BF6639F0229C6A9400226693 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -877,85 +859,85 @@
 			};
 			name = Release;
 		};
-		5ABB14A72167C42700A2CB2C /* Debug */ = {
+		BF6639E5229C6A7D00226693 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9UES6HSTC;
-				INFOPLIST_FILE = WeedmapsChallengeTests/Info.plist;
+				DEVELOPMENT_TEAM = 8T6KWW939D;
+				INFOPLIST_FILE = UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.weedmaps.WeedmapsChallengeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christianampe.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeedmapsChallenge.app/WeedmapsChallenge";
+				TEST_TARGET_NAME = WeedmapsChallenge;
 			};
 			name = Debug;
 		};
-		5ABB14A82167C42700A2CB2C /* Release */ = {
+		BF6639E6229C6A7D00226693 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9UES6HSTC;
-				INFOPLIST_FILE = WeedmapsChallengeTests/Info.plist;
+				DEVELOPMENT_TEAM = 8T6KWW939D;
+				INFOPLIST_FILE = UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.weedmaps.WeedmapsChallengeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christianampe.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeedmapsChallenge.app/WeedmapsChallenge";
+				TEST_TARGET_NAME = WeedmapsChallenge;
 			};
 			name = Release;
 		};
-		5ABB14AA2167C42700A2CB2C /* Debug */ = {
+		BF6639F3229C6A9400226693 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9UES6HSTC;
-				INFOPLIST_FILE = WeedmapsChallengeUITests/Info.plist;
+				DEVELOPMENT_TEAM = 8T6KWW939D;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.weedmaps.WeedmapsChallengeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christianampe.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WeedmapsChallenge;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeedmapsChallenge.app/WeedmapsChallenge";
 			};
 			name = Debug;
 		};
-		5ABB14AB2167C42700A2CB2C /* Release */ = {
+		BF6639F4229C6A9400226693 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9UES6HSTC;
-				INFOPLIST_FILE = WeedmapsChallengeUITests/Info.plist;
+				DEVELOPMENT_TEAM = 8T6KWW939D;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.weedmaps.WeedmapsChallengeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christianampe.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WeedmapsChallenge;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeedmapsChallenge.app/WeedmapsChallenge";
 			};
 			name = Release;
 		};
@@ -980,20 +962,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5ABB14A62167C42700A2CB2C /* Build configuration list for PBXNativeTarget "WeedmapsChallengeTests" */ = {
+		BF6639E4229C6A7D00226693 /* Build configuration list for PBXNativeTarget "UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5ABB14A72167C42700A2CB2C /* Debug */,
-				5ABB14A82167C42700A2CB2C /* Release */,
+				BF6639E5229C6A7D00226693 /* Debug */,
+				BF6639E6229C6A7D00226693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5ABB14A92167C42700A2CB2C /* Build configuration list for PBXNativeTarget "WeedmapsChallengeUITests" */ = {
+		BF6639F2229C6A9400226693 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5ABB14AA2167C42700A2CB2C /* Debug */,
-				5ABB14AB2167C42700A2CB2C /* Release */,
+				BF6639F3229C6A9400226693 /* Debug */,
+				BF6639F4229C6A9400226693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
