@@ -10,6 +10,7 @@ import Foundation
 
 protocol HomeInteractorProtocol: class {
     var view: HomeViewControllerProtocol? { get set }
+    var recentSearches: [String] { get set }
     
     func fetchAutocomplete(for text: String)
     func fetchBusinesses(for text: String?)
@@ -18,11 +19,28 @@ protocol HomeInteractorProtocol: class {
 class HomeInteractor: HomeInteractorProtocol {
     private lazy var yelpProvider = Yelp.Networking()
     
-    private var recentSearches: [String] = []
     private var searchOffset: Int = 0
     private var currentBusinessSearch: String?
     
+    var recentSearches: [String] {
+        get {
+            return (UserDefaults.HomeSearch.array(forKey: .recentSearches) as? [String]) ?? []
+        }
+        
+        set {
+            UserDefaults.HomeSearch.set(newValue, forKey: .recentSearches)
+        }
+    }
+    
     weak var view: HomeViewControllerProtocol?
+}
+
+extension UserDefaults {
+    enum HomeSearch: ArrayUserDefaultable {
+        enum ArrayDefaultKey: String {
+            case recentSearches
+        }
+    }
 }
 
 extension HomeInteractor {
@@ -57,7 +75,7 @@ extension HomeInteractor {
             shouldPurge = true
             
             if !recentSearches.contains(text) {
-                recentSearches.append(text)
+                recentSearches = recentSearches + [text]
             }
         } else if let previousSearchTerm = currentBusinessSearch {
             searchTerm = previousSearchTerm

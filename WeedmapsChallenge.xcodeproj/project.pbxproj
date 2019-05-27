@@ -13,8 +13,6 @@
 		5ABB14842167C42400A2CB2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14822167C42400A2CB2C /* Main.storyboard */; };
 		5ABB14862167C42600A2CB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14852167C42600A2CB2C /* Assets.xcassets */; };
 		5ABB14892167C42600A2CB2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14872167C42600A2CB2C /* LaunchScreen.storyboard */; };
-		5ABB14942167C42700A2CB2C /* YelpAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB14932167C42700A2CB2C /* YelpAPIClientTests.swift */; };
-		5ABB149F2167C42700A2CB2C /* WeedmapsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB149E2167C42700A2CB2C /* WeedmapsChallengeUITests.swift */; };
 		5ABB14BC2167CF2400A2CB2C /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB14BB2167CF2400A2CB2C /* HomeDetailViewController.swift */; };
 		5ABB14BE2167D2D900A2CB2C /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB14BD2167D2D900A2CB2C /* BusinessCell.swift */; };
 		5ABB14C02167D31100A2CB2C /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */; };
@@ -35,8 +33,8 @@
 		BF64843A229B33B80089590D /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF648439229B33B80089590D /* CALayer++.swift */; };
 		BF64843C229B3EB80089590D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843B229B3EB80089590D /* HomeInteractor.swift */; };
 		BF64843F229B59460089590D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64843E229B59460089590D /* LocationManager.swift */; };
+		BF6639D8229C55DB00226693 /* KeyNamespaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6639D7229C55DB00226693 /* KeyNamespaceable.swift */; };
 		BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E04229793B20077598A /* Kingfisher.framework */; };
-		BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC93E05229793B20077598A /* Alamofire.framework */; };
 		BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */; };
 		BFC93E1122979B3A0077598A /* HomeSearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */; };
 		BFC93E142297A08C0077598A /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC93E132297A08C0077598A /* NetworkingProvider.swift */; };
@@ -88,11 +86,7 @@
 		5ABB14882167C42600A2CB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ABB148A2167C42600A2CB2C /* WeedmapsChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeedmapsChallenge-Info.plist"; sourceTree = "<group>"; };
 		5ABB148F2167C42700A2CB2C /* WeedmapsChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeedmapsChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ABB14932167C42700A2CB2C /* YelpAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPIClientTests.swift; sourceTree = "<group>"; };
-		5ABB14952167C42700A2CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ABB149A2167C42700A2CB2C /* WeedmapsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeedmapsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ABB149E2167C42700A2CB2C /* WeedmapsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeedmapsChallengeUITests.swift; sourceTree = "<group>"; };
-		5ABB14A02167C42700A2CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ABB14BB2167CF2400A2CB2C /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		5ABB14BD2167D2D900A2CB2C /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		5ABB14BF2167D31100A2CB2C /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -113,8 +107,8 @@
 		BF648439229B33B80089590D /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
 		BF64843B229B3EB80089590D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BF64843E229B59460089590D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BF6639D7229C55DB00226693 /* KeyNamespaceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNamespaceable.swift; sourceTree = "<group>"; };
 		BFC93E04229793B20077598A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		BFC93E05229793B20077598A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BFC93E0D22979B050077598A /* HomeSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchResultsViewController.swift; sourceTree = "<group>"; };
 		BFC93E1022979B3A0077598A /* HomeSearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSearchResults.storyboard; sourceTree = "<group>"; };
 		BFC93E132297A08C0077598A /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
@@ -146,7 +140,6 @@
 			files = (
 				BF648438229B250C0089590D /* WebKit.framework in Frameworks */,
 				BFC93E06229793B20077598A /* Kingfisher.framework in Frameworks */,
-				BFC93E07229793B20077598A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				5ABB147B2167C42300A2CB2C /* WeedmapsChallenge */,
-				5ABB14922167C42700A2CB2C /* WeedmapsChallengeTests */,
-				5ABB149D2167C42700A2CB2C /* WeedmapsChallengeUITests */,
 				5ABB147A2167C42300A2CB2C /* Products */,
 				BFC93E03229793B20077598A /* Frameworks */,
 			);
@@ -195,24 +186,6 @@
 				5ABB14AE2167C62400A2CB2C /* Source */,
 			);
 			path = WeedmapsChallenge;
-			sourceTree = "<group>";
-		};
-		5ABB14922167C42700A2CB2C /* WeedmapsChallengeTests */ = {
-			isa = PBXGroup;
-			children = (
-				5ABB14932167C42700A2CB2C /* YelpAPIClientTests.swift */,
-				5ABB14952167C42700A2CB2C /* Info.plist */,
-			);
-			path = WeedmapsChallengeTests;
-			sourceTree = "<group>";
-		};
-		5ABB149D2167C42700A2CB2C /* WeedmapsChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5ABB149E2167C42700A2CB2C /* WeedmapsChallengeUITests.swift */,
-				5ABB14A02167C42700A2CB2C /* Info.plist */,
-			);
-			path = WeedmapsChallengeUITests;
 			sourceTree = "<group>";
 		};
 		5ABB14AC2167C5DD00A2CB2C /* Home */ = {
@@ -340,11 +313,18 @@
 			path = "Location Manager";
 			sourceTree = "<group>";
 		};
+		BF6639D6229C55C100226693 /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				BF6639D7229C55DB00226693 /* KeyNamespaceable.swift */,
+			);
+			path = "User Defaults";
+			sourceTree = "<group>";
+		};
 		BFC93E03229793B20077598A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				BF648437229B250C0089590D /* WebKit.framework */,
-				BFC93E05229793B20077598A /* Alamofire.framework */,
 				BFC93E04229793B20077598A /* Kingfisher.framework */,
 			);
 			name = Frameworks;
@@ -416,6 +396,7 @@
 		BFC93E332297B34F0077598A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BF6639D6229C55C100226693 /* User Defaults */,
 				BF1FEE7622999EDA003A7F67 /* Extensions */,
 				BFC93E342297B3910077598A /* Storyboard */,
 				BF1FEE7122999E4D003A7F67 /* Segue */,
@@ -604,7 +585,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)//Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Run Script";
@@ -651,6 +631,7 @@
 				BF1FEE7422999E65003A7F67 /* SegueIdentifiable.swift in Sources */,
 				BFC93E0E22979B050077598A /* HomeSearchResultsViewController.swift in Sources */,
 				BFC93E302297B05D0077598A /* HomeSearchResultsViewModelProtocol.swift in Sources */,
+				BF6639D8229C55DB00226693 /* KeyNamespaceable.swift in Sources */,
 				BFC93E272297A8650077598A /* YelpNetworking.swift in Sources */,
 				BFC93E2C2297ABED0077598A /* HomeDetailViewModelProtocol.swift in Sources */,
 				BFC93E432297B39E0077598A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
@@ -691,7 +672,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ABB14942167C42700A2CB2C /* YelpAPIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +679,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ABB149F2167C42700A2CB2C /* WeedmapsChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
