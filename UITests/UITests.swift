@@ -27,10 +27,7 @@ class UITests: XCTestCase {
     }
 
     func testExample() {
-        let app = XCUIApplication()
-        XCTAssertFalse(app.staticTexts["Home Title Label"].exists)
-        app.tabBars.buttons["Favorites"].tap()
-        XCTAssertTrue(app.staticTexts["Favorites Title Label"].exists)
+       
     }
 
 }
